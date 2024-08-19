@@ -1,0 +1,50 @@
+/* FeaturesOverview.css */
+
+.features-overview {
+    background-color: #121212; /* Dark background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    color: #e0e0e0; /* Light text for contrast */
+  }
+  
+  .features-overview h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #00ffff; /* Techy cyan color */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .features-overview ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .features-overview li {
+    font-size: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid #333; /* Subtle divider */
+    position: relative;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .features-overview li:before {
+    content: '•';
+    color: #00ffff; /* Cyan bullet point */
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .features-overview li:hover {
+    color: #ffffff; /* Brighten text on hover */
+  }
+  
+  .features-overview li:last-child {
+    border-bottom: none; /* Remove the last border */
+  }
+  

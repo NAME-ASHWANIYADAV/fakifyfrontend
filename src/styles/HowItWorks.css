@@ -1,0 +1,75 @@
+/* HowItWorks.css */
+
+.how-it-works {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #121212; /* Dark background for the entire page */
+    color: #e0e0e0; /* Light grey text for readability */
+    padding-left: 220px; /* Space for the sidebar */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+main {
+    margin-top: 60px; /* Space for the fixed header */
+    padding: 20px;
+}
+
+main h1 {
+    color: #00ffcc; /* Techy green color for headings */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.section {
+    background: #1e1e1e; /* Slightly lighter background for each section */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    color: #00ffcc; /* Techy green color for subheadings */
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.section p {
+    font-size: 1.1rem;
+    color: #cccccc; /* Slightly lighter grey for paragraph text */
+}
+
+@media (max-width: 768px) {
+    .how-it-works {
+        padding-left: 70px; /* Adjust padding for smaller screens */
+    }
+
+    main h1 {
+        font-size: 2rem; /* Smaller font size for smaller screens */
+    }
+
+    main p {
+        font-size: 1rem; /* Smaller font size for smaller screens */
+    }
+
+    .section h2 {
+        font-size: 1.5rem; /* Smaller font size for smaller screens */
+    }
+
+    .section p {
+        font-size: 1rem; /* Smaller font size for smaller screens */
+    }
+}

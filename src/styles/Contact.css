@@ -1,0 +1,108 @@
+/* Contact.css */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #121212; /* Dark background for the entire page */
+    color: #e0e0e0; /* Light grey text for readability */
+    padding-left: 220px; /* Space for the sidebar */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+main {
+    margin-top: 60px; /* Space for the fixed header */
+    padding: 20px;
+}
+
+main h1 {
+    color: #00ffcc; /* Techy green color for headings */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    background: #1e1e1e; /* Slightly lighter background for the form */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    color: #e0e0e0; /* Light grey for labels */
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #2c2c2c; /* Dark background for inputs */
+    color: #e0e0e0; /* Light text color for inputs */
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00ffcc; /* Techy green border on focus */
+    outline: none;
+}
+
+.contact-form .submit-button {
+    background-color: #00ffcc; /* Techy green background for the button */
+    color: #121212; /* Dark text color for contrast */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .submit-button:hover {
+    background-color: #00cc99; /* Slightly darker green on hover */
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding-left: 70px; /* Adjust padding for smaller screens */
+    }
+
+    main h1 {
+        font-size: 2rem; /* Smaller font size for smaller screens */
+    }
+
+    main p {
+        font-size: 1rem; /* Smaller font size for smaller screens */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9rem; /* Smaller font size for smaller screens */
+    }
+
+    .contact-form .submit-button {
+        font-size: 0.9rem; /* Smaller font size for smaller screens */
+    }
+}

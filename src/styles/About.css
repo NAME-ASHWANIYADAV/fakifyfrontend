@@ -1,0 +1,100 @@
+/* About.css */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #121212; /* Dark background for the entire page */
+    color: #e0e0e0; /* Light grey text for readability */
+    padding-left: 220px; /* Space for the sidebar */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.intro, .mission, .approach, .solution {
+    margin: 40px 20px;
+    padding: 20px;
+    background: #1c1c1c; /* Slightly lighter background for sections */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.intro h1, .mission h2, .approach h2, .solution h2 {
+    color: #00ffcc; /* Techy green color for headings */
+    margin-bottom: 20px;
+}
+
+.intro p, .mission p, .solution p {
+    line-height: 1.6;
+    font-size: 16px;
+    color: #cccccc; /* Slightly lighter grey for paragraph text */
+}
+
+.approach ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.approach ul li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.approach ul li::before {
+    content: '▹';
+    color: #00ffcc;
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+}
+
+.approach ul li strong {
+    color: #ffffff; /* White for emphasis on strong text */
+}
+
+.approach ul li p {
+    color: #b0b0b0; /* Slightly darker grey for descriptions */
+    line-height: 1.5;
+}
+
+.footer {
+    margin-top: auto;
+    background: #1c1c1c;
+    padding: 10px 20px;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5); /* Top shadow for depth */
+    text-align: center;
+}
+
+.footer-links a {
+    color: #00ffcc;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff; /* White color on hover */
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding-left: 70px; /* Adjust padding for smaller screens */
+    }
+
+    .intro, .mission, .approach, .solution {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .footer-links a {
+        margin: 0 5px;
+    }
+}

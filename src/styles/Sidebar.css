@@ -1,0 +1,95 @@
+/* Sidebar.css */
+
+.sidebar {
+    width: 250px; /* Increased width to fit the logo */
+    height: 100vh;
+    background: #1a1a1a; /* Dark background */
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7); /* Subtle shadow on the right */
+    position: fixed; /* Fixed position to keep it on the left side */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px; /* Space between logo and menu items */
+}
+
+.logo {
+    width: 120px; /* Adjust as needed */
+    height: auto;
+}
+
+.logo-name {
+    color: #00ffcc; /* Techy green color */
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: #00ffcc; /* Techy green color */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    border-left: 3px solid transparent; /* Left border for selected state */
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #2a2a2a; /* Slightly lighter background on hover */
+    color: #ffffff; /* White color on hover */
+    border-left: 3px solid #00ffcc; /* Left border highlighting active link */
+    box-shadow: inset 5px 0 15px rgba(0, 255, 204, 0.2); /* Glow effect on hover */
+}
+
+.sidebar ul li a.active {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .logo {
+        width: 50px; /* Adjust logo size for small screens */
+    }
+
+    .logo-name {
+        display: none; /* Hide the logo name on small screens */
+    }
+
+    .sidebar ul li a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .sidebar ul li {
+        margin: 15px 0;
+    }
+
+    .sidebar ul li a.active {
+        border-left: 3px solid #00cc99; /* Adjusted color for smaller screens */
+    }
+}
