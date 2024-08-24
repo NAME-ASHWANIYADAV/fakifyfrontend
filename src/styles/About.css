@@ -1,100 +1,123 @@
 /* About.css */
 
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.main-content {
+    margin-left: 250px; /* Adjust this based on the sidebar width */
+    width: calc(100% - 250px); /* Full width minus sidebar width */
+    box-sizing: border-box;
+}
+
 .about {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #121212; /* Dark background for the entire page */
-    color: #e0e0e0; /* Light grey text for readability */
-    padding-left: 220px; /* Space for the sidebar */
-}
-
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+    background: #0d0f21; /* Dark background for techy look */
+    color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    width: 100%; /* Ensure full width */
 }
 
 .intro, .mission, .approach, .solution {
-    margin: 40px 20px;
-    padding: 20px;
-    background: #1c1c1c; /* Slightly lighter background for sections */
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: #0d0f21; /* Ensure background color is consistent */
 }
 
-.intro h1, .mission h2, .approach h2, .solution h2 {
-    color: #00ffcc; /* Techy green color for headings */
+.intro {
+    background: linear-gradient(135deg, #1e2a43, #2c3e50); /* Subtle gradient */
+}
+
+.intro h1 {
+    color: #8e44ad; /* Purple for heading */
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-.intro p, .mission p, .solution p {
+.intro p {
+    font-size: 1.2rem;
     line-height: 1.6;
-    font-size: 16px;
-    color: #cccccc; /* Slightly lighter grey for paragraph text */
+}
+
+.mission {
+    background: linear-gradient(135deg, #2c3e50, #1e2a43); /* Different gradient for variety */
+    margin-top: 20px;
+}
+
+.mission h2 {
+    color: #3498db; /* Blue for sub-headings */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.mission p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.approach {
+    background: linear-gradient(135deg, #1e2a43, #2c3e50);
+    margin-top: 20px;
+}
+
+.approach h2 {
+    color: #8e44ad; /* Purple for sub-headings */
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .approach ul {
     list-style-type: none;
-    padding-left: 0;
-    margin: 20px 0;
+    padding: 0;
 }
 
-.approach ul li {
+.approach li {
+    font-size: 1.2rem;
+    line-height: 1.6;
     margin-bottom: 15px;
-    padding-left: 20px;
-    position: relative;
+    background: #2c3e50;
+    border-radius: 5px;
+    padding: 10px 15px;
 }
 
-.approach ul li::before {
-    content: '▹';
-    color: #00ffcc;
-    position: absolute;
-    left: 0;
-    font-size: 20px;
+.approach li strong {
+    color: #3498db; /* Blue for strong text */
 }
 
-.approach ul li strong {
-    color: #ffffff; /* White for emphasis on strong text */
+.solution {
+    background: linear-gradient(135deg, #2c3e50, #1e2a43);
+    margin-top: 20px;
 }
 
-.approach ul li p {
-    color: #b0b0b0; /* Slightly darker grey for descriptions */
-    line-height: 1.5;
+.solution h2 {
+    color: #8e44ad; /* Purple for sub-headings */
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-.footer {
-    margin-top: auto;
-    background: #1c1c1c;
-    padding: 10px 20px;
-    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5); /* Top shadow for depth */
-    text-align: center;
+.solution p {
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
-.footer-links a {
-    color: #00ffcc;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 14px;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    color: #ffffff; /* White color on hover */
-}
-
-@media (max-width: 768px) {
-    .about {
-        padding-left: 70px; /* Adjust padding for smaller screens */
-    }
-
+@media screen and (max-width: 768px) {
     .intro, .mission, .approach, .solution {
-        margin: 20px 10px;
-        padding: 15px;
+        padding: 20px;
     }
 
-    .footer-links a {
-        margin: 0 5px;
+    .intro h1, .mission h2, .approach h2, .solution h2 {
+        font-size: 1.8rem;
+    }
+
+    .intro p, .mission p, .approach li, .solution p {
+        font-size: 1rem;
     }
 }

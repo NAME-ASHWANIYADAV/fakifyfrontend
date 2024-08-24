@@ -5,95 +5,89 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #1e1e1e; /* Dark background */
-  color: #ffffff; /* White text for contrast */
+  min-height: 100vh;
+  background: #0d0f21; /* Dark background for the whole page */
+  color: #ffffff;
   padding: 20px;
 }
 
-.login-container h2 {
-  font-size: 28px;
-  font-weight: bold;
-  color: #00ffcc; /* Techy green color */
+h2 {
+  font-size: 2rem;
+  color: #8e44ad; /* Purple for the main heading */
   margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 400px; /* Limit form width */
-  background-color: #2a2a2a; /* Slightly lighter dark background */
+  max-width: 400px;
+  background: #1e2a43; /* Dark blue background for the form */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
-form input {
-  background-color: #333333; /* Darker input background */
-  border: 1px solid #444444; /* Slightly lighter border */
-  color: #ffffff;
+input {
+  font-size: 1rem;
   padding: 10px;
   margin-bottom: 15px;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
+  border: 1px solid #3498db; /* Blue border for input fields */
+  border-radius: 4px;
+  background: #2e3a5f; /* Slightly lighter blue background for inputs */
+  color: #ffffff;
 }
 
-form input:focus {
-  border-color: #00ffcc; /* Highlight border on focus */
-  background-color: #444444; /* Slightly lighter background on focus */
-  outline: none;
-}
-
-form button {
-  background-color: #00ffcc;
-  color: #1e1e1e;
-  padding: 12px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-top: 10px;
-}
-
-form button:hover {
-  background-color: #00cc99; /* Slightly darker green on hover */
-  transform: scale(1.05);
-}
-
-form button:active {
-  transform: scale(0.95);
+input::placeholder {
+  color: #aab8c2; /* Light gray placeholder text */
 }
 
 button {
-  background: transparent;
+  font-size: 1rem;
+  padding: 10px;
   border: none;
-  color: #00ffcc;
-  font-size: 14px;
+  border-radius: 4px;
+  background: #8e44ad; /* Purple background for the button */
+  color: #ffffff;
   cursor: pointer;
   margin-top: 10px;
-  transition: color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  color: #00cc99; /* Darker shade on hover */
+  background: #732d91; /* Darker purple on hover */
 }
 
-@media (max-width: 768px) {
+button:focus {
+  outline: 2px solid #3498db; /* Blue outline on focus */
+}
+
+button:last-of-type {
+  background: transparent;
+  border: 1px solid #3498db; /* Blue border for the 'Forgot Password' button */
+  color: #3498db;
+  margin-top: 15px;
+}
+
+button:last-of-type:hover {
+  background: #3498db; /* Blue background on hover for 'Forgot Password' button */
+  color: #ffffff;
+}
+
+@media screen and (max-width: 480px) {
   .login-container {
       padding: 10px;
   }
 
-  form {
-      padding: 15px;
+  h2 {
+      font-size: 1.5rem;
   }
 
-  form input,
-  form button {
-      font-size: 14px;
+  input {
+      font-size: 0.9rem;
+  }
+
+  button {
+      font-size: 0.9rem;
   }
 }

@@ -1,50 +1,86 @@
 /* FeaturesOverview.css */
 
 .features-overview {
-    background-color: #121212; /* Dark background */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
-    color: #e0e0e0; /* Light text for contrast */
-  }
-  
+  background-color: #0d0f21; /* Dark background for the section */
+  color: #ffffff; /* White text for readability */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.features-overview h2 {
+  font-size: 2rem;
+  color: #8e44ad; /* Purple for the header */
+  margin-bottom: 20px;
+  text-shadow: 0px 0px 15px rgba(142, 68, 173, 0.7);
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.features-overview ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-overview ul li {
+  background-color: #1a1d33; /* Slightly lighter dark background for list items */
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+  color: #d4d4dc; /* Light grey for better readability */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.features-overview ul li:hover {
+  background-color: #2c3e50; /* Darker background on hover */
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+.features-overview ul li::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at center, rgba(142, 68, 173, 0.3), transparent);
+  border-radius: 50%;
+  z-index: 0;
+  transition: transform 0.3s ease;
+}
+
+.features-overview ul li::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at center, rgba(52, 152, 219, 0.3), transparent);
+  border-radius: 50%;
+  z-index: 0;
+  transition: transform 0.3s ease;
+}
+
+.features-overview ul li:hover::before,
+.features-overview ul li:hover::after {
+  transform: scale(1.2); /* Slightly enlarge gradients on hover */
+}
+
+@media screen and (max-width: 768px) {
   .features-overview h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #00ffff; /* Techy cyan color */
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 1.8rem;
   }
-  
-  .features-overview ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+
+  .features-overview ul li {
+    font-size: 1.3rem;
+    padding: 10px;
   }
-  
-  .features-overview li {
-    font-size: 18px;
-    padding: 10px 0;
-    border-bottom: 1px solid #333; /* Subtle divider */
-    position: relative;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .features-overview li:before {
-    content: '•';
-    color: #00ffff; /* Cyan bullet point */
-    position: absolute;
-    left: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .features-overview li:hover {
-    color: #ffffff; /* Brighten text on hover */
-  }
-  
-  .features-overview li:last-child {
-    border-bottom: none; /* Remove the last border */
-  }
-  
+}

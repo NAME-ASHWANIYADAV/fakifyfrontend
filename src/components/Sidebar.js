@@ -7,8 +7,7 @@ const Sidebar = () => {
     return (
         <nav className="sidebar">
             <div className="logo-container">
-                <img src={logo} alt="Fakify Logo" className="logo" />
-                <h1 className="logo-name">Fakify</h1>
+                
             </div>
             <ul>
                 <li><NavLink to="/" exact>Home</NavLink></li>

@@ -1,95 +1,97 @@
 /* Sidebar.css */
-
 .sidebar {
-    width: 250px; /* Increased width to fit the logo */
+    width: 250px;
     height: 100vh;
-    background: #1a1a1a; /* Dark background */
+    background: linear-gradient(135deg, #0d0f21, #2c3e50); /* Dark techy gradient */
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7); /* Subtle shadow on the right */
-    position: fixed; /* Fixed position to keep it on the left side */
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    position: fixed; /* Ensure it doesn’t overlap other components */
+    top: 0; /* Ensure correct positioning */
+    left: 0; /* Ensure correct positioning */
 }
 
 .logo-container {
-    text-align: center;
-    margin-bottom: 30px; /* Space between logo and menu items */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 .logo {
-    width: 120px; /* Adjust as needed */
+    width: 80px;
     height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
 }
 
 .logo-name {
-    color: #00ffcc; /* Techy green color */
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 1.5rem;
+    color: #8e44ad; /* Purple color for the logo name */
+    text-shadow: 0 3px 5px rgba(142, 68, 173, 0.5);
+    animation: fadeInDown 1s ease-in-out;
 }
 
-.sidebar ul {
-    list-style-type: none;
+ul {
+    list-style: none;
     padding: 0;
-    margin: 0;
     width: 100%;
 }
 
-.sidebar ul li {
+ul li {
     margin: 20px 0;
+    text-align: center;
 }
 
-.sidebar ul li a {
-    display: block;
-    color: #00ffcc; /* Techy green color */
+ul li a {
+    color: #ffffff;
+    font-size: 1.2rem;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
     padding: 10px 20px;
-    transition: background-color 0.3s, color 0.3s;
-    border-left: 3px solid transparent; /* Left border for selected state */
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.sidebar ul li a:hover,
-.sidebar ul li a.active {
-    background-color: #2a2a2a; /* Slightly lighter background on hover */
-    color: #ffffff; /* White color on hover */
-    border-left: 3px solid #00ffcc; /* Left border highlighting active link */
-    box-shadow: inset 5px 0 15px rgba(0, 255, 204, 0.2); /* Glow effect on hover */
+ul li a:hover,
+ul li a.active {
+    background-color: #8e44ad; /* Purple background on hover and active state */
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(142, 68, 173, 0.7); /* Purple glow effect */
 }
 
-.sidebar ul li a.active {
-    font-weight: bold;
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-@media (max-width: 768px) {
+/* Responsive Design */
+@media screen and (max-width: 768px) {
     .sidebar {
-        width: 60px;
+        width: 200px;
     }
 
     .logo {
-        width: 50px; /* Adjust logo size for small screens */
+        width: 60px;
     }
 
     .logo-name {
-        display: none; /* Hide the logo name on small screens */
+        font-size: 1.2rem;
     }
 
-    .sidebar ul li a {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .sidebar ul li {
-        margin: 15px 0;
-    }
-
-    .sidebar ul li a.active {
-        border-left: 3px solid #00cc99; /* Adjusted color for smaller screens */
+    ul li a {
+        font-size: 1rem;
     }
 }

@@ -4,105 +4,104 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #121212; /* Dark background for the entire page */
-    color: #e0e0e0; /* Light grey text for readability */
-    padding-left: 220px; /* Space for the sidebar */
+    background: #0d0f21; /* Dark background for techy look */
+    color: #ffffff;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+.main-content {
+    flex: 1;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-main {
-    margin-top: 60px; /* Space for the fixed header */
-    padding: 20px;
-}
-
-main h1 {
-    color: #00ffcc; /* Techy green color for headings */
+h1 {
+    color: #8e44ad; /* Purple for heading */
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-main p {
+p {
     font-size: 1.2rem;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .contact-form {
-    background: #1e1e1e; /* Slightly lighter background for the form */
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    background: #1e2a43; /* Dark blue background for form */
+    border-radius: 10px;
     padding: 20px;
-    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.contact-form .form-group {
+.form-group {
     margin-bottom: 20px;
 }
 
-.contact-form label {
+.form-group label {
     display: block;
     font-size: 1rem;
-    color: #e0e0e0; /* Light grey for labels */
-    margin-bottom: 5px;
+    color: #3498db; /* Blue for labels */
+    margin-bottom: 8px;
 }
 
-.contact-form input,
-.contact-form textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #333;
-    border-radius: 4px;
-    background: #2c2c2c; /* Dark background for inputs */
-    color: #e0e0e0; /* Light text color for inputs */
+    border: 1px solid #3498db; /* Blue border for input fields */
+    border-radius: 5px;
+    background: #ffffff; /* White background for fields */
+    color: #333333;
     font-size: 1rem;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #00ffcc; /* Techy green border on focus */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #8e44ad; /* Purple border on focus */
     outline: none;
 }
 
-.contact-form .submit-button {
-    background-color: #00ffcc; /* Techy green background for the button */
-    color: #121212; /* Dark text color for contrast */
-    padding: 10px 20px;
+.submit-button {
+    display: inline-block;
+    background: #8e44ad; /* Purple background for button */
+    color: #ffffff;
+    padding: 15px 25px;
     border: none;
-    border-radius: 4px;
-    font-size: 1rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s;
 }
 
-.contact-form .submit-button:hover {
-    background-color: #00cc99; /* Slightly darker green on hover */
+.submit-button:hover {
+    background: #732d91; /* Darker purple on hover */
 }
 
-@media (max-width: 768px) {
-    .contact {
-        padding-left: 70px; /* Adjust padding for smaller screens */
+@media screen and (max-width: 768px) {
+    .main-content {
+        padding: 20px;
     }
 
-    main h1 {
-        font-size: 2rem; /* Smaller font size for smaller screens */
+    h1 {
+        font-size: 2rem;
     }
 
-    main p {
-        font-size: 1rem; /* Smaller font size for smaller screens */
+    p {
+        font-size: 1rem;
     }
 
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 0.9rem; /* Smaller font size for smaller screens */
+    .form-group label {
+        font-size: 0.9rem;
     }
 
-    .contact-form .submit-button {
-        font-size: 0.9rem; /* Smaller font size for smaller screens */
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+    }
+
+    .submit-button {
+        font-size: 1rem;
+        padding: 10px 20px;
     }
 }

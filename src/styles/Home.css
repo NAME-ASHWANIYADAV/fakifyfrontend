@@ -1,66 +1,105 @@
 /* Home.css */
+
 .home {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
-    color: #ffffff;
-    font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #0d0f21; /* Dark background for the whole page */
+  color: #ffffff;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.hero-section {
+  padding: 40px;
+  background: #8e44ad; /* Purple background for the hero section */
+  color: #ffffff;
+  text-align: center;
+  border-bottom: 5px solid #3498db; /* Blue accent at the bottom */
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background: #3498db; /* Blue for CTA button */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+  background: #2980b9; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.cta-button:active {
+  background: #1f5b8a; /* Even darker blue on click */
+}
+
+.features-overview {
+  padding: 40px;
+  background: #1e2a43; /* Dark blue for features section */
+  border-top: 5px solid #8e44ad; /* Purple accent at the top */
+}
+
+.features-overview h2 {
+  font-size: 2rem;
+  color: #3498db; /* Blue for features heading */
+  margin-bottom: 20px;
+}
+
+.features-overview ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features-overview li {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #2c3e50; /* Subtle border for list items */
+  padding-bottom: 10px;
+}
+
+.features-overview li:last-child {
+  border-bottom: none;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section h1 {
+      font-size: 2rem;
   }
-  
-  .main-content {
-    flex-grow: 1;
-    padding: 20px;
-    overflow-y: auto;
+
+  .hero-section p {
+      font-size: 1rem;
   }
-  
-  main::-webkit-scrollbar {
-    width: 8px;
+
+  .cta-button {
+      font-size: 1rem;
+      padding: 10px 20px;
   }
-  
-  main::-webkit-scrollbar-thumb {
-    background-color: #4a4a4a;
-    border-radius: 4px;
+
+  .features-overview h2 {
+      font-size: 1.5rem;
   }
-  
-  main::-webkit-scrollbar-track {
-    background-color: #1a1a1a;
+
+  .features-overview li {
+      font-size: 1rem;
   }
-  
-  /* Responsive Styles */
-  @media (max-width: 1200px) {
-    .home {
-      padding: 10px;
-    }
-    
-    .main-content {
-      padding: 15px;
-    }
-  }
-  
-  @media (max-width: 992px) {
-    .home {
-      flex-direction: column;
-    }
-    
-    .main-content {
-      padding: 10px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .main-content {
-      padding: 8px;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .home {
-      padding: 0;
-    }
-  
-    .main-content {
-      padding: 5px;
-    }
-  }
-  
+}

@@ -3,67 +3,82 @@
 .hero-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 80vh;
-    background: linear-gradient(135deg, #1a1a1a, #2a2a2a); /* Dark gradient background */
-    color: #00ffcc; /* Techy green color */
+    align-items: center;
     text-align: center;
-    padding: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    background: linear-gradient(135deg, #0d0f21, #2c3e50); /* Dark techy gradient background */
+    color: #ffffff;
+    padding: 0 20px;
 }
 
 .hero-section h1 {
-    font-size: 48px;
+    font-size: 2.5rem;
+    color: #8e44ad; /* Purple color for the main heading */
     margin-bottom: 20px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-left: 180px;
+    text-shadow: 0 3px 5px rgba(142, 68, 173, 0.5);
+    animation: fadeInDown 1s ease-in-out;
 }
 
 .hero-section p {
-    font-size: 18px;
-    margin-bottom: 40px;
-    color: #cccccc;
-    max-width: 600px;
-    margin-left: 180px;
+    font-size: 1.2rem;
+    color: #ecf0f1; /* Light grey text for contrast */
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-in-out;
 }
 
 .cta-button {
     padding: 15px 30px;
-    font-size: 16px;
-    color: #1e1e1e;
-    background-color: #00ffcc;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #3498db; /* Blue background for CTA button */
+    border-radius: 5px;
+    text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 255, 204, 0.5);
-    margin-left: 200px;
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
 .cta-button:hover {
-    background-color: #00cc99; /* Slightly darker green on hover */
-    transform: scale(1.05);
+    background-color: #8e44ad; /* Purple background on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 0 15px rgba(142, 68, 173, 0.7); /* Purple glow effect */
 }
 
-.cta-button:active {
-    transform: scale(0.95);
+/* Keyframes for animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-@media (max-width: 768px) {
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
     .hero-section h1 {
-        font-size: 36px;
+        font-size: 2rem;
     }
 
     .hero-section p {
-        font-size: 16px;
-        margin-bottom: 30px;
+        font-size: 1rem;
     }
 
     .cta-button {
-        padding: 12px 25px;
-        font-size: 14px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }

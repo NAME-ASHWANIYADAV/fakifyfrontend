@@ -5,107 +5,89 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #1e1e1e; /* Dark background */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    background-color: #0d0f21; /* Dark background for a techy feel */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    position: fixed; /* Fixed position to stay at the top */
+    width: 100%; /* Full width */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
-.header .logo {
-    font-size: 24px;
+.logo {
+    font-size: 1.8rem;
     font-weight: bold;
-    color: #00ffcc; /* Techy green color */
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    color: #8e44ad; /* Purple color for the logo */
+    text-shadow: 0 3px 5px rgba(142, 68, 173, 0.5);
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logo:hover {
+    color: #3498db; /* Blue color on hover */
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
 .auth-buttons {
     display: flex;
     gap: 15px;
-    margin-right: 299px;
 }
 
 .auth-buttons .login-btn,
 .auth-buttons .signup-btn {
     padding: 10px 20px;
-    font-size: 16px;
-    border: none;
     border-radius: 5px;
-    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #ffffff;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .auth-buttons .login-btn {
-    background-color: #00ffcc;
-    color: #1e1e1e;
+    background-color: #3498db; /* Blue background for login button */
 }
 
 .auth-buttons .signup-btn {
-    background-color: #006666;
-    color: #ffffff;
+    background-color: #8e44ad; /* Purple background for signup button */
 }
 
 .auth-buttons .login-btn:hover,
 .auth-buttons .signup-btn:hover {
-    background-color: #00cc99; /* Slightly different shade for hover */
-    transform: scale(1.05);
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 0 10px rgba(142, 68, 173, 0.7); /* Purple glow on hover */
 }
 
-.auth-buttons .login-btn:active,
-.auth-buttons .signup-btn:active {
-    transform: scale(0.95);
+.auth-buttons .login-btn:hover {
+    background-color: #8e44ad; /* Purple background on hover */
 }
 
-@media (max-width: 1024px) {
-    .header {
-        padding: 15px;
-    }
-
-    .header .logo {
-        font-size: 20px;
-    }
-
-    .auth-buttons .login-btn,
-    .auth-buttons .signup-btn {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
+.auth-buttons .signup-btn:hover {
+    background-color: #3498db; /* Blue background on hover */
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 480px) {
     .header {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
     }
 
     .auth-buttons {
-        margin-top: 15px;
-        width: calc(100% + 20px); /* Extend button width to account for negative margin */
-        margin-left: -20px; /* Move buttons further to the left */
-        justify-content: flex-start; /* Align buttons to the start */
-    }
-
-    .auth-buttons .login-btn,
-    .auth-buttons .signup-btn {
-        width: 48%;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .header .logo {
-        font-size: 18px;
+        flex-direction: column;
+        width: 100%;
     }
 
     .auth-buttons .login-btn,
     .auth-buttons .signup-btn {
         width: 100%;
-        font-size: 14px;
-        padding: 10px;
+        text-align: center;
     }
+}
 
-    .auth-buttons {
-        flex-direction: column;
-        gap: 10px;
-        margin-left: 0; /* Remove margin for smaller screens */
-    }
+/* Ensure content below the header starts after it */
+.page-content {
+    margin-top: 60px; /* Adjust according to header height */
 }

@@ -1,44 +1,128 @@
+/* deepFakeResultPage.css */
+
 .results-container {
-    padding: 20px;
-    background-color: #1e1e1e;
-    color: #fff;
-    max-width: 800px;
-    margin: 0 auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0d0f21; /* Dark background for techy look */
+  color: #ffffff;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  color: #8e44ad; /* Purple for heading */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.video-preview {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.report {
+  background: #1e2a43; /* Dark blue background for the report section */
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+.report h3 {
+  color: #3498db; /* Blue for subsection headings */
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.report p,
+.report ul {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.report ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.report li {
+  margin-bottom: 10px;
+}
+
+.probability-score {
+  font-size: 1.5rem;
+  color: #8e44ad; /* Purple for probability score */
+  font-weight: bold;
+}
+
+.download-btn,
+.share-btn {
+  background: #8e44ad; /* Purple background for buttons */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.download-btn:hover,
+.share-btn:hover {
+  background: #732d91; /* Darker purple on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.download-btn:active,
+.share-btn:active {
+  background: #6d2d7f; /* Even darker purple on click */
+}
+
+@media screen and (max-width: 768px) {
+  .results-container {
+      padding: 20px;
   }
-  
-  .video-preview video {
-    width: 100%;
-    border-radius: 4px;
-    margin-bottom: 20px;
+
+  h2 {
+      font-size: 2rem;
   }
-  
+
+  .video-preview {
+      max-width: 100%;
+  }
+
   .report h3 {
-    margin-top: 20px;
-    font-size: 1.2em;
+      font-size: 1.2rem;
   }
-  
+
+  .report p {
+      font-size: 0.9rem;
+  }
+
   .report ul {
-    list-style-type: none;
-    padding: 0;
+      padding-left: 15px;
   }
-  
-  .report ul li {
-    background-color: #333;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
+
+  .report li {
+      font-size: 0.9rem;
   }
-  
-  .download-btn, .share-btn {
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #00bcd4;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    cursor: pointer;
-    margin-right: 10px;
+
+  .download-btn,
+  .share-btn {
+      font-size: 1rem;
+      padding: 10px 20px;
   }
-  
+}
