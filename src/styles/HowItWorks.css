@@ -1,15 +1,18 @@
 /* HowItWorks.css */
 
 .how-it-works {
+    margin-left: 250px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background: #000; /* Dark background for the whole page */
     color: #ffffff;
+    width:80%;
 }
 
 .main-content {
     padding: 40px;
+    
 }
 
 h1 {
@@ -31,6 +34,7 @@ p {
     background: linear-gradient(135deg, #18181C, #222228);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    width:90%;
 }
 
 .section h2 {

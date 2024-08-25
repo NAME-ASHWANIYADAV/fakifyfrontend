@@ -1,5 +1,8 @@
 /* About.css */
-
+.about{
+    margin-left: 250px;
+    
+}
 body {
     margin: 0;
     padding: 0;
@@ -10,6 +13,7 @@ body {
     margin-left: 250px; /* Adjust this based on the sidebar width */
      /* Full width minus sidebar width */
     box-sizing: border-box;
+    overflow: auto;
 }
 
 .about {
@@ -20,7 +24,7 @@ body {
     color: #ffffff;
     padding: 20px;
     box-sizing: border-box; /* Include padding in element's total width and height */
-    width: 100%; /* Ensure full width */
+    width: 80%; /* Ensure full width */
 }
 
 .intro, .mission, .approach, .solution {
