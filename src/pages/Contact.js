@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import '../styles/Contact.css';
+import Gify from '../assets/gif.gif';
 
 
 const Contact = () => {
@@ -106,7 +107,7 @@ const Contact = () => {
             <button type="submit" className="submit-button">Send Message</button>
           </form>
           <div className='image-section'>
-            <img src="src/assets/gif.gif" alt="Description of GIF" className="gif-image" />
+            <img src={Gify} alt="Description of GIF" className="gif-image" />
           </div>
         </div>
       </main>
