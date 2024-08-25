@@ -64,7 +64,7 @@ const Home = () => {
 
   const subtitleStyle = {
     fontSize: '2rem',
-    marginTop: '20px',
+    marginTop: '2px',
     color: '#ddd',
   };
 
@@ -158,16 +158,13 @@ const Home = () => {
       {/* Information Section */}
       <div className="container">
       <div className="text-container">
-        <p className="subtitle">Avoid Getting Scammed</p>
+        <p style={subtitleStyle}>Avoid Getting Scammed</p>
         <p>Learn to recognize common scams and protect yourself from fraudsters. Stay informed and always verify the authenticity of any suspicious communication.</p>
 
-        <p className="subtitle">Prove yourself innocent</p>
-        <p>Don't fall victim to false accusations or scams. Be prepared to provide evidence and take quick action to safeguard your reputation.</p>
-
-        <p className="subtitle">Save Yourself from Fake Call Frauds</p>
+        <p style={subtitleStyle}>Save Yourself from Fake Call Frauds</p>
         <p>Stay alert and don't share personal information over the phone. Be cautious of unsolicited calls claiming to be from legitimate organizations.</p>
 
-        <p className="subtitle">Combat cybercrime targeting women</p>
+        <p style={subtitleStyle}>Combat cybercrime targeting women</p>
         <p>Protect yourself online by understanding the tactics used by cybercriminals. Learn about safe online practices and take steps to enhance your digital security.</p>
       </div>
 
@@ -182,7 +179,7 @@ const Home = () => {
 
       <div className='try_now'>
         <div className='imageSection'>
-          <img src={gif} alt="gif" style={{ width: '100%', maxWidth: '500px', height: 'auto' }} />
+          <img src={gif} alt="gif" style={{ width: '100%', height: '350px' }} />
         </div>
 
         <div className='featuresOverview'>
