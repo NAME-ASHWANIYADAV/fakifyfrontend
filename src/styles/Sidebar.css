@@ -61,7 +61,8 @@ ul li a {
 
 ul li a:hover,
 ul li a.active {
-    background-color: #978d85; /* Purple background on hover and active state */
+    background: linear-gradient(90deg, #FF9898, #8054FF);
+/* Purple background on hover and active state */
     color: #ffffff;
     box-shadow: 0 0 10px rgba(43,48,60,255); /* Purple glow effect */
 }

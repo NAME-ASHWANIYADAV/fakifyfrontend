@@ -63,7 +63,7 @@ const Home = () => {
       <main className="main-content" style={heroSectionStyle}>
         {/* Hero Section */}
         <div style={textSectionStyle}>
-          <h1 style={titleStyle}>STATE OF DEEPFAKES</h1>
+          <h1 className='main-text' >STATES OF DEEPFAKES</h1>
           <p style={subtitleStyle}>Realities, Threats, and Impact</p>
         </div>
         <div style={imageSectionStyle}>
