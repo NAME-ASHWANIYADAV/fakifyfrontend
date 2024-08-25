@@ -4,6 +4,7 @@ import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import '../styles/Contact.css';
 
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -56,56 +57,58 @@ const Contact = () => {
       <main className="main-content">
         <h1>Contact Us</h1>
         <p>If you have any questions or need further information, please reach out to us using the form below.</p>
-        <form onSubmit={handleSubmit} className="contact-form">
-          <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="subject">Subject</label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              rows="4"
-              required
-            />
-          </div>
-          <button type="submit" className="submit-button">Send Message</button>
+        <div className="contact-container">
+          <form onSubmit={handleSubmit} className="contact-form">
+            <div className="form-group">
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                rows="4"
+                required
+              />
+            </div>
+            <button type="submit" className="submit-button">Send Message</button>
+          </form>
           <div className='image-section'>
-            
+            <img src="src/assets/gif.gif" alt="Description of GIF" className="gif-image" />
           </div>
-        </form>
+        </div>
       </main>
       <Footer />
     </div>
