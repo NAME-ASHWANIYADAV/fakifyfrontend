@@ -2,9 +2,11 @@
 
 .contact {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    background: #0d0f21; /* Dark background for techy look */
+    background: #000; /* Dark background for techy look */
     color: #ffffff;
 }
 
@@ -30,12 +32,14 @@ p {
 .contact-form {
     background: #1e2a43; /* Dark blue background for form */
     border-radius: 10px;
+    margin-left:auto;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .form-group {
     margin-bottom: 20px;
+    padding-right:20px;
 }
 
 .form-group label {
@@ -49,6 +53,7 @@ p {
 .form-group textarea {
     width: 100%;
     padding: 10px;
+
     border: 1px solid #3498db; /* Blue border for input fields */
     border-radius: 5px;
     background: #ffffff; /* White background for fields */

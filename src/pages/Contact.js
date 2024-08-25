@@ -102,6 +102,9 @@ const Contact = () => {
             />
           </div>
           <button type="submit" className="submit-button">Send Message</button>
+          <div className='image-section'>
+            
+          </div>
         </form>
       </main>
       <Footer />

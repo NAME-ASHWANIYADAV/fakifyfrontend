@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #0d0f21; /* Dark background for a techy feel */
+    background-color:#0B0B0B; /* Dark background for a techy feel */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     position: fixed; /* Fixed position to stay at the top */
     width: 98%; /* Full width */

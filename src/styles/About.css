@@ -16,7 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: #0d0f21; /* Dark background for techy look */
+    background: #000; /* Dark background for techy look */
     color: #ffffff;
     padding: 20px;
     box-sizing: border-box; /* Include padding in element's total width and height */
