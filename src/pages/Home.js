@@ -10,6 +10,7 @@ import img1 from '../assets/image1.png'; // Add your image paths
 import img2 from '../assets/image2.png';
 import img3 from '../assets/image3.png';
 import img4 from '../assets/image4.png';
+import gif from "../assets/deepfakevsrl.gif";
 
 const Home = () => {
   const images = [img1, img2, img3, img4]; // Array of images
@@ -58,13 +59,6 @@ const Home = () => {
     alignItems: 'center',
   };
 
-  const titleStyle = {
-    color: 'red',
-    fontSize: '6rem',
-    fontWeight: 'bold',
-    margin: 0,
-  };
-
   const subtitleStyle = {
     fontSize: '2rem',
     marginTop: '20px',
@@ -74,20 +68,21 @@ const Home = () => {
   const sliderContainerStyle = {
     display: 'flex',
     overflow: 'hidden', // Hide overflowing content
+    height: '700px',
     width: '100%',
     maxWidth: '1200px',
     margin: '20px 0',
     position: 'relative', // For positioning dots
+    
   };
   
   const sliderImageStyle = {
     flex: '0 0 100%', // Make sure each image takes up full width of container
     width: '100%', // Set width to 100% of the container
-    height: '500px', // Maintain aspect ratio
+    height: '600px', // Maintain aspect ratio
     transition: 'transform 0.5s ease-in-out', // Smooth transition for sliding effect
     objectFit: 'cover', // Fit the image within the container without distortion
   };
-  
 
   const dotContainerStyle = {
     display: 'flex',
@@ -122,9 +117,18 @@ const Home = () => {
           <img src={topgirl} alt="Top Girl" style={{ width: '100%', maxWidth: '500px', height: 'auto' }} />
         </div>
       </main>
-      <FeaturesOverview />
-      <div className=''>
+      
+      {/* Add "Try Now" heading */}
+      <h2 style={{ textAlign: 'center', color: '#fff', margin: '40px 0 20px' }}>Try Now</h2>
 
+      <div className='try_now'>
+        <div className='imageSection'>
+          <img src={gif} alt="gif" style={{ width: '100%', maxWidth: '500px', height: 'auto' }} />
+        </div>
+      
+        <div className='featuresOverview'>
+          <FeaturesOverview />
+        </div>
       </div>
       
       {/* Image Slider with Dots */}
@@ -145,7 +149,6 @@ const Home = () => {
         </div>
       </div>
 
-      
       <Footer />
     </div>
   );

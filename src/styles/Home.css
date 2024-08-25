@@ -1,5 +1,28 @@
 /* Existing styles in Home.css */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+.try-now-heading {
+  text-align: center;
+  color: #fff;
+  margin: 40px 0 20px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.try_now {
+  display: flex;
+  align-items: flex-start; /* Aligns items to the start of the container (optional, adjust as needed) */
+  justify-content: space-between; /* Ensures there's space between items, adjust as needed */
+}
+
+.imageSection {
+  flex: 1; /* Allows the image section to take up space proportionally */
+  display: flex; /* Ensures that the image is centered within its container */
+  justify-content: center;
+}
+
+.featuresOverview {
+  flex: 1; /* Allows the FeaturesOverview section to take up space proportionally */
+  margin-left: 20px; /* Adds some space between the image and the FeaturesOverview section */
+}
 
 .home {
   display: flex;
