@@ -8,7 +8,7 @@
     background-color: #0d0f21; /* Dark background for a techy feel */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     position: fixed; /* Fixed position to stay at the top */
-    width: 100%; /* Full width */
+    width: 98%; /* Full width */
     top: 0; /* Align to the top */
     left: 0; /* Align to the left */
     z-index: 1000; /* Ensure it stays above other content */
@@ -48,7 +48,7 @@
 }
 
 .auth-buttons .signup-btn {
-    background-color: #8e44ad; /* Purple background for signup button */
+    /*background-color: #8e44ad; /* Purple background for signup button */
 }
 
 .auth-buttons .login-btn:hover,

@@ -1,105 +1,67 @@
-/* Home.css */
-
+/* Existing styles in Home.css */
 .home {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
-  background: #0d0f21; /* Dark background for the whole page */
-  color: #ffffff;
-}
-
-.main-content {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text color */
+  text-align: center;
+  padding: 20px;
 }
 
 .hero-section {
-  padding: 40px;
-  background: #8e44ad; /* Purple background for the hero section */
-  color: #ffffff;
-  text-align: center;
-  border-bottom: 5px solid #3498db; /* Blue accent at the bottom */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px; /* Limit the max width */
+  margin: 0 auto;
 }
 
-.hero-section h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+.text-section {
+  flex: 1;
+  color: #fff;
 }
 
-.hero-section p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.cta-button {
-  background: #3498db; /* Blue for CTA button */
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  padding: 15px 25px;
-  font-size: 1.1rem;
-  text-decoration: none;
-  display: inline-block;
-  transition: background 0.3s, transform 0.2s;
+.hero-section img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
 }
 
-.cta-button:hover {
-  background: #2980b9; /* Darker blue on hover */
-  transform: scale(1.05); /* Slight scale effect on hover */
+.title {
+  color: red;
+  font-size: 6rem;
+  font-weight: bold;
+  margin: 0;
 }
 
-.cta-button:active {
-  background: #1f5b8a; /* Even darker blue on click */
-}
-
-.features-overview {
-  padding: 40px;
-  background: #1e2a43; /* Dark blue for features section */
-  border-top: 5px solid #8e44ad; /* Purple accent at the top */
-}
-
-.features-overview h2 {
+.subtitle {
   font-size: 2rem;
-  color: #3498db; /* Blue for features heading */
-  margin-bottom: 20px;
-}
-
-.features-overview ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.features-overview li {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #2c3e50; /* Subtle border for list items */
-  padding-bottom: 10px;
-}
-
-.features-overview li:last-child {
-  border-bottom: none;
+  margin-top: 20px;
+  color: #ddd;
 }
 
 @media screen and (max-width: 768px) {
-  .hero-section h1 {
-      font-size: 2rem;
+  .title {
+    font-size: 4rem;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
   }
 
-  .hero-section p {
-      font-size: 1rem;
-  }
-
-  .cta-button {
-      font-size: 1rem;
-      padding: 10px 20px;
-  }
-
-  .features-overview h2 {
-      font-size: 1.5rem;
-  }
-
-  .features-overview li {
-      font-size: 1rem;
+  .image-section {
+    display: none; /* Hide image section on small screens */
   }
 }
+
