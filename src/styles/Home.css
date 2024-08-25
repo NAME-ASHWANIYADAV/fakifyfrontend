@@ -1,4 +1,6 @@
 /* Existing styles in Home.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 .home {
   display: flex;
   flex-direction: column;
@@ -14,12 +16,29 @@
 .main-text{
 
   font-size: 80px;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   color: #FF9898;
   text-shadow: 3px 3px 0px #8054FF,   /* 3D shadow effect */
-               6px 6px 0px #5A00FF;  /* Deeper shadow for depth */
+               6px 6px 0px #5A00FF;   /* Deeper shadow for depth */
   transform: perspective(500px) rotateX(10deg) rotateY(10deg);
-  }
+  position: relative; /* For positioning the mirrored text */
+}
+
+.main-text::after {
+  content: attr(data-text); /* Mirror the same text */
+  font-size: 80px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: rgba(255, 152, 152, 0.5); /* Lighter color for reflection */
+  text-shadow: 3px 3px 0px rgba(128, 84, 255, 0.5), /* Lighter shadow for reflection */
+               6px 6px 0px rgba(90, 0, 255, 0.5);
+  position: absolute;
+  top: 100%;  /* Position the reflection directly below */
+  left: 0;
+  transform: scaleY(-1);  /* Flip vertically for mirror effect */
+  opacity: 0.5;  /* Make the reflection slightly transparent */
+}
 
 .hero-section {
   display: flex;

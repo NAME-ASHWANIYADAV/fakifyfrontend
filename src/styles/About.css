@@ -29,11 +29,12 @@ body {
     margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background: #0d0f21; /* Ensure background color is consistent */
+    background: #18181C; /* Ensure background color is consistent */
 }
 
 .intro {
-    background: linear-gradient(135deg, #1e2a43, #2c3e50); /* Subtle gradient */
+    background: linear-gradient(135deg, #18181C, #222228);
+    /* Subtle gradient */
 }
 
 .intro h1 {
@@ -48,7 +49,8 @@ body {
 }
 
 .mission {
-    background: linear-gradient(135deg, #2c3e50, #1e2a43); /* Different gradient for variety */
+    background: linear-gradient(135deg, #18181C, #222228);
+    /* Different gradient for variety */
     margin-top: 20px;
 }
 
@@ -64,7 +66,7 @@ body {
 }
 
 .approach {
-    background: linear-gradient(135deg, #1e2a43, #2c3e50);
+    background: linear-gradient(135deg, #18181C, #222228);
     margin-top: 20px;
 }
 
@@ -83,7 +85,7 @@ body {
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 15px;
-    background: #2c3e50;
+    background: #000000;
     border-radius: 5px;
     padding: 10px 15px;
 }
@@ -93,7 +95,7 @@ body {
 }
 
 .solution {
-    background: linear-gradient(135deg, #2c3e50, #1e2a43);
+    background: linear-gradient(135deg, #18181C, #222228);
     margin-top: 20px;
 }
 
