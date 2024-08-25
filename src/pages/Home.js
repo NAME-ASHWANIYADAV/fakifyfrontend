@@ -12,6 +12,7 @@ import img3 from '../assets/image3.png';
 import img4 from '../assets/image4.png';
 import gif from "../assets/deepfakevsrl.gif";
 
+
 const Home = () => {
   const images = [img1, img2, img3, img4]; // Array of images
   const [currentIndex, setCurrentIndex] = useState(0); // State to track current image index
@@ -92,6 +93,19 @@ const Home = () => {
     width: '100%',
   };
 
+  const buttonStyle = {
+    backgroundColor: '#FF9898',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '10px',
+    padding: '10px 20px',
+    fontSize: '1rem',
+    cursor: 'pointer',
+    marginTop: '10px',
+    transition: 'background-color 0.3s ease',
+
+  };
+
   const dotStyle = (isActive) => ({
     height: '12px',
     width: '12px',
@@ -102,6 +116,23 @@ const Home = () => {
     cursor: 'pointer',
     transition: 'background-color 0.3s ease', // Smooth transition for dot color
   });
+  const newSectionStyle = {
+    textAlign: 'center',
+    color: '#fff',
+    margin: '40px 0',
+  };
+
+  const newSectionItemStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: '10px 0',
+  };
+
+  const newSectionIconStyle = {
+    fontSize: '2rem',
+    marginRight: '10px',
+  };
 
   return (
     <div style={containerStyle}>
@@ -112,12 +143,34 @@ const Home = () => {
         <div style={textSectionStyle}>
           <h1 className='main-text' >STATES OF DEEPFAKES</h1>
           <p style={subtitleStyle}>Realities, Threats, and Impact</p>
+          <button style={buttonStyle} className='button'>Try Now</button>
         </div>
         <div style={imageSectionStyle}>
           <img src={topgirl} alt="Top Girl" style={{ width: '100%', maxWidth: '500px', height: 'auto' }} />
         </div>
+        
       </main>
-      
+
+      <div style={newSectionStyle}>
+        <div style={newSectionItemStyle}>
+          <span style={newSectionIconStyle}>⚠️</span>
+          <h2>Avoid Getting Scammed: </h2>
+        </div>
+        <div style={newSectionItemStyle}>
+          <span style={newSectionIconStyle}>🔍</span>
+          <h2>Prove yourself innocent </h2>
+        </div>
+        <div style={newSectionItemStyle}>
+          <span style={newSectionIconStyle}>🎙️</span>
+          <p>Save Yourself from Fake Call Frauds</p>
+        </div>
+        <div style={newSectionItemStyle}>
+          <span style={newSectionIconStyle}></span>
+          <p>Combat cybercrime targeting women</p>
+        </div>
+        
+      </div>
+     
       {/* Add "Try Now" heading */}
       <h2 style={{ textAlign: 'center', color: '#fff', margin: '40px 0 20px' }}>Try Now</h2>
 

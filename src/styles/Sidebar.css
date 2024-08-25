@@ -1,6 +1,6 @@
 /* Sidebar.css */
 .sidebar {
-    width: 250px;
+    width: 15%;
     height: 100vh;
     background: linear-gradient(135deg, #0d0f21, #2E2E2E); /* Dark techy gradient */
     display: flex;
