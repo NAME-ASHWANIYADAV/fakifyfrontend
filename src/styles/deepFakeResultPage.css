@@ -7,7 +7,6 @@
   background: #0d0f21; /* Dark background for techy look */
   color: #ffffff;
   padding: 40px;
-  
   margin: 0 auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -93,36 +92,36 @@ video {
 
 @media screen and (max-width: 768px) {
   .results-container {
-      padding: 20px;
+    padding: 20px;
   }
 
   h2 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .video-preview {
-      max-width: 100%;
+    max-width: 100%;
   }
 
   .report h3 {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 
   .report p {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 
   .report ul {
-      padding-left: 15px;
+    padding-left: 15px;
   }
 
   .report li {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 
   .download-btn,
   .share-btn {
-      font-size: 1rem;
-      padding: 10px 20px;
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 }
