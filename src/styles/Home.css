@@ -1,6 +1,93 @@
 /* Existing styles in Home.css */
 
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+.subtitle {
+  font-weight: bold;
+  margin: 0; /* Remove all margins */
+  padding: 0; /* Remove all padding */
+  font-size: 1.5rem; /* 75% of original size */
+}
+
+.text-container p {
+  margin: 0; /* Remove all margins */
+  padding: 0; /* Remove all padding */
+  font-size: 1.125rem; /* 75% of original size */
+  margin-bottom: 2px; /* Reduced space between paragraphs */
+  line-height: 1.2; /* Reduced line height for tighter text */
+}
+
+.text-container p.subtitle {
+  margin: 2px 0; /* Minimal margin above and below */
+  padding: 0; /* Remove any padding */
+  font-size: 1.125rem; /* 75% of original size */
+}
+
+
+.container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 400px;
+}
+
+.text-container {
+  flex: 1;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-size-adjust: 1px;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.container {
+  margin-left:200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.text-container {
+  width: 45%;
+}
+
+.text-container p {
+  margin-bottom: 20px;
+}
+
+.text-container .subtitle {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.image-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adds space between images */
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
 .main-content{
   width:110%;
 }
@@ -39,7 +126,14 @@
   text-align: center;
   padding: 20px;
 }
-
+.button{
+  margin-top: 0;
+  color: #8054FF;
+  box-shadow: 3px 3px 0px #8054FF,   /* 3D shadow effect */
+               6px 6px 0px #5A00FF;   /* Deeper shadow for depth */
+  transform: perspective(500px) rotateX(10deg) rotateY(10deg);
+  position: relative; /* For positioning the mirrored text */
+}
 .main-text{
 
   font-size: 80px;
@@ -73,7 +167,7 @@
   justify-content: center;
   width: 100%;
   max-width: 1200px; /* Limit the max width */
-  margin: 0 auto;
+  margin-left:15%;
 }
 
 .text-section {

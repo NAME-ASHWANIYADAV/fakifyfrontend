@@ -5,13 +5,25 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color:#0B0B0B; /* Dark background for a techy feel */
+    background-color: #0B0B0B; /* Dark background for a techy feel */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     position: fixed; /* Fixed position to stay at the top */
     width: 98%; /* Full width */
     top: 0; /* Align to the top */
     left: 0; /* Align to the left */
     z-index: 1000; /* Ensure it stays above other content */
+    gap: 20px; /* Space between logo/text and auth buttons */
+}
+
+.header > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo image and text */
+}
+
+.logo-image {
+    width: 40px; /* Adjust the size of the logo image */
+    height: auto;
 }
 
 .logo {
@@ -48,7 +60,7 @@
 }
 
 .auth-buttons .signup-btn {
-    /*background-color: #8e44ad; /* Purple background for signup button */
+    background-color: #8e44ad; /* Purple background for signup button */
 }
 
 .auth-buttons .login-btn:hover,
@@ -89,5 +101,5 @@
 
 /* Ensure content below the header starts after it */
 .page-content {
-    margin-top: 60px; /* Adjust according to header height */
+    margin-top: 80px; /* Adjust according to header height */
 }
