@@ -12,7 +12,7 @@ const ResetPassword = () => {
   const handleResetPassword = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/reset-password', { email, newPassword });
+      await axios.post('https://fakifybackend.onrender.com/api/auth/reset-password', { email, newPassword });
       alert('Password reset successfully! Please log in.');
       navigate('/login');
     } catch (error) {

@@ -12,7 +12,7 @@ const ForgotPassword = () => {
   const handleVerification = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/verify-question', { email, answer });
+      const response = await axios.post('https://fakifybackend.onrender.com/api/auth/verify-question', { email, answer });
       if (response.data.success) {
         navigate('/reset-password', { state: { email } });
       } else {
@@ -26,7 +26,7 @@ const ForgotPassword = () => {
   const fetchSecurityQuestion = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/get-security-question', { email });
+      const response = await axios.post('https://fakifybackend.onrender.com/api/auth/get-security-question', { email });
       setQuestion(response.data.question);
     } catch (error) {
       alert('Error fetching security question. Please try again.');

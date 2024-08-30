@@ -28,7 +28,7 @@ const VideoUploadPage = () => {
     formData.append('analysisType', analysisType);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/upload-video', formData, {
+      const response = await axios.post('https://fakifybackend.onrender.com/api/videoupload-video', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 
