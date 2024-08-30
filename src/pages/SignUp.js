@@ -12,7 +12,7 @@ const SignUp = () => {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://fakifybackend.onrender.com/api/signup', { name, email, password, question, answer });
+      await axios.post('https://fakifybackend.onrender.com/api/auth/signup', { name, email, password, question, answer });
       alert('Sign Up Successful! Please log in.');
     } catch (error) {
       alert('Error during sign up. Please try again.');
