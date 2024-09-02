@@ -153,26 +153,33 @@ const Home = () => {
         </div>
       </main>
       <div style={imageSectionStyle}>
-          <img src={ph} alt="Top Girl" style={{ width: '100%', width:'1100px', height: 'auto' }} />
-        </div>
+        <img src={ph} alt="Top Girl" style={{ width: '100%', width: '1100px', height: 'auto' }} />
+      </div>
       {/* Information Section */}
       <div className="container">
-      <div className="text-container">
-        <p style={subtitleStyle}>Avoid Getting Scammed</p>
-        <p>Learn to recognize common scams and protect yourself from fraudsters. Stay informed and always verify the authenticity of any suspicious communication.</p>
+        <div className="text-container">
+          <div className="box scam">
+            <p className="subtitle">Avoid Getting Scammed</p>
+            <p className="description">Learn to recognize common scams and protect yourself from fraudsters. Stay informed and always verify the authenticity of any suspicious communication.</p>
+          </div>
 
-        <p style={subtitleStyle}>Save Yourself from Fake Call Frauds</p>
-        <p>Stay alert and don't share personal information over the phone. Be cautious of unsolicited calls claiming to be from legitimate organizations.</p>
+          <div className="box fraud">
+            <p className="subtitle">Save Yourself from Fake Call Frauds</p>
+            <p className="description">Stay alert and don't share personal information over the phone. Be cautious of unsolicited calls claiming to be from legitimate organizations.</p>
+          </div>
 
-        <p style={subtitleStyle}>Combat cybercrime targeting women</p>
-        <p>Protect yourself online by understanding the tactics used by cybercriminals. Learn about safe online practices and take steps to enhance your digital security.</p>
+          <div className="box crime">
+            <p className="subtitle">Combat Cybercrime Targeting Women</p>
+            <p className="description">Protect yourself online by understanding the tactics used by cybercriminals. Learn about safe online practices and take steps to enhance your digital security.</p>
+          </div>
+        </div>
+
+
+        <div className="image-container">
+
+          <img src={wp} alt="Manipulated Image Example" />
+        </div>
       </div>
-
-      <div className="image-container">
-        
-        <img src={wp} alt="Manipulated Image Example" />
-      </div>
-    </div>
 
       {/* Add "Try Now" heading */}
       <h2 style={{ textAlign: 'center', color: '#fff', margin: '40px 0 20px' }}>Try Now</h2>
@@ -205,7 +212,7 @@ const Home = () => {
         </div>
       </div>
 
-      <Footer />
+      
     </div>
   );
 };

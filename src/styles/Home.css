@@ -64,10 +64,16 @@ img {
   font-family: Arial, sans-serif;
 }
 
-.text-container {
+/* .text-container {
   width: 45%;
+  display: flex;
+  text-align: center;
+  background-color: antiquewhite;
+  border-radius: 4px;
 }
-
+.text-container .scam,.text-container .fraud,.text-container .crime{
+  background-color: #5A00FF;
+}
 .text-container p {
   margin-bottom: 20px;
 }
@@ -76,22 +82,68 @@ img {
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 5px;
+} */
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between boxes */
+  padding: 20px;
+  padding-right:0;
+}
+
+.box {
+  background-color: (135deg, #18181C, #222228); /* White background for the boxes */
+  border: 1px solid #ddd; /* Light border for a subtle separation */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.subtitle {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333; /* Dark text color for better readability */
+  margin: 0 0 10px 0; /* Space below the subtitle */
+}
+
+.description {
+  font-size: 1em;
+  color: #555; /* Slightly lighter text color */
+  margin: 0; /* Remove margin for the description text */
+}
+
+/* Specific styles for different boxes */
+.scam {
+  border-left: 5px solid #ffcc00; /* Yellow left border for "Scam" */
+}
+
+.fraud {
+  border-left: 5px solid #ff5733; /* Orange left border for "Fraud" */
+}
+
+.crime {
+  border-left: 5px solid #33cc99; /* Green left border for "Crime" */
 }
 
 .image-container {
-  width: 50%;
+  padding-left: 0;
+  width: auto;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   gap: 20px; /* Adds space between images */
 }
 
 .image-container img {
-  width: 100%;
+
+  width: 25rem;
+  height: 25rem;
   border-radius: 10px;
 }
 
 .main-content{
   width:110%;
+  margin-top:100px;
 }
 .try-now-heading {
   text-align: center;
@@ -216,4 +268,5 @@ img {
     display: none; /* Hide image section on small screens */
   }
 }
+
 

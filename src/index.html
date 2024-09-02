@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Crystals Effect</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #121212; /* Dark background for contrast */
+            overflow: hidden;
+            cursor: none; /* Hide the default cursor */
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ffd700, transparent); /* Golden color */
+            pointer-events: none;
+            animation: sparkleAnimation 1.5s forwards;
+        }
+
+        @keyframes sparkleAnimation {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Function to create a sparkle at the mouse position
+        function createSparkle(x, y) {
+            const sparkle = document.createElement('div');
+            sparkle.classList.add('sparkle');
+            sparkle.style.left = `${x}px`;
+            sparkle.style.top = `${y}px`;
+            document.body.appendChild(sparkle);
+
+            // Remove sparkle after animation completes
+            setTimeout(() => {
+                sparkle.remove();
+            }, 1500); // 1.5s matches the animation duration
+        }
+
+        // Listen for mouse movements
+        document.addEventListener('mousemove', (e) => {
+            // Create a sparkle at the mouse pointer's location
+            createSparkle(e.pageX - 5, e.pageY - 5); // Offset to center the sparkle
+        });
+    </script>
+</body>
+</html>
