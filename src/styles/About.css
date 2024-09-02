@@ -29,8 +29,9 @@ body {
 
 .intro, .mission, .approach, .solution {
     padding: 40px;
+    margin-right:40px;
+    margin-top:40px;
    
-    margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background: #18181C; /* Ensure background color is consistent */
