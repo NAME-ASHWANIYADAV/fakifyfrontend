@@ -1,0 +1,25 @@
+/* src/components/MagicCrystals.css */
+body {
+    cursor: none; /* Hide the default cursor */
+}
+
+.sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffd700, transparent); /* Golden color */
+    pointer-events: none;
+    animation: sparkleAnimation 1.5s forwards;
+}
+
+@keyframes sparkleAnimation {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}

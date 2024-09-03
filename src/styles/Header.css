@@ -1,105 +1,80 @@
-/* Header.css */
-
 .header {
+    width: 98%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #0B0B0B; /* Dark background for a techy feel */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    position: fixed; /* Fixed position to stay at the top */
-    width: 98%; /* Full width */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    z-index: 1000; /* Ensure it stays above other content */
-    gap: 20px; /* Space between logo/text and auth buttons */
+    padding: 20px 40px;
+    background-color: #000;
+    color: white;
 }
-
-.header > div:first-child {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between logo image and text */
-}
-
-.logo-image {
-    width: 40px; /* Adjust the size of the logo image */
-    height: auto;
-}
-
 .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #8e44ad; /* Purple color for the logo */
-    text-shadow: 0 3px 5px rgba(142, 68, 173, 0.5);
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex; /* Use flex layout for the logo container */
+    align-items: center; /* Align items vertically centered */
 }
 
-.logo:hover {
-    color: #3498db; /* Blue color on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+.img {
+    width: 60px; /* Set your desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo text and image */
 }
 
-.auth-buttons {
-    display: flex;
-    gap: 15px;
+.logo h1 {
+    font-size: 48px;
+    color: white;
+    margin: 0; /* Remove default margin */
 }
 
-.auth-buttons .login-btn,
-.auth-buttons .signup-btn {
-    padding: 10px 20px;
-    border-radius: 5px;
+
+
+.nav-links a, .login,.signup {
+    margin: 0 15px;
     text-decoration: none;
-    font-size: 1rem;
-    color: #ffffff;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: white;
+    font-weight: bold;
 }
 
-.auth-buttons .login-btn {
-    background-color: #3498db; /* Blue background for login button */
+.login,.signup {
+    background-color: orange;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white; /* Ensure text is visible on the orange background */
 }
 
-.auth-buttons .signup-btn {
-    background-color: #8e44ad; /* Purple background for signup button */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a; /* Dark background color */
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 0.1px solid silver; /* Add silver border */
 }
 
-.auth-buttons .login-btn:hover,
-.auth-buttons .signup-btn:hover {
-    transform: translateY(-2px); /* Slight lift effect */
-    box-shadow: 0 0 10px rgba(142, 68, 173, 0.7); /* Purple glow on hover */
+
+.navbar-item {
+    color: white; /* White text color */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s, background 0.3s;
+    font-family: sans-serif;
+    background: linear-gradient(45deg, white, white); /* Set initial background */
+    -webkit-background-clip: text; /* Ensure gradient applies to text */
+    -webkit-text-fill-color: transparent; /* Ensure text color is transparent */
 }
 
-.auth-buttons .login-btn:hover {
-    background-color: #8e44ad; /* Purple background on hover */
+.navbar-item:hover {
+    background: linear-gradient(45deg, #ff6600, #ffcc00);
+    -webkit-background-clip: text; /* Apply gradient to text */
+    -webkit-text-fill-color: transparent; /* Ensure text is visible */
 }
 
-.auth-buttons .signup-btn:hover {
-    background-color: #3498db; /* Blue background on hover */
-}
-
-@media screen and (max-width: 480px) {
-    .header {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    .auth-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .auth-buttons .login-btn,
-    .auth-buttons .signup-btn {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* Ensure content below the header starts after it */
-.page-content {
-    margin-top: 80px; /* Adjust according to header height */
+.navbar-item.active {
+    background: linear-gradient(45deg, #ff6600, #ffcc00); /* Gradient for active item */
+    -webkit-background-clip: text; /* Apply gradient to text */
+    -webkit-text-fill-color: transparent; /* Ensure text is visible */
 }

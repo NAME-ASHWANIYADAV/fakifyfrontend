@@ -1,69 +1,81 @@
 /* HowItWorks.css */
-
-.how-it-works {
-    margin-left: 250px;
-    margin-right: 40px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background: #000; /* Dark background for the whole page */
-    color: #ffffff;
-    width:80%;
+.timeline-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #000; /* Dark background */
 }
 
-.main-content {
-    padding: 40px;
-   
-    
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: orange; /* Timeline line color */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: #8e44ad; /* Purple for main heading */
-    margin-bottom: 20px;
-    text-align: center;
+.timeline-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  position: relative;
+  width: 50%;
 }
 
-p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
+.timeline-item:nth-child(odd) {
+  left: 0;
 }
 
-.section {
-    margin-bottom: 40px;
-    margin-right:40px;
-    padding: 20px;
-    background: linear-gradient(135deg, #18181C, #222228);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    width:90%;
+.timeline-item:nth-child(even) {
+  left: 50%;
 }
 
-.section h2 {
-    font-size: 1.8rem;
-    color: #3498db; /* Blue for section headings */
-    margin-bottom: 15px;
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: orange; /* Circle color */
+  top: 15px;
+  left: -10px;
+  transform: translateX(-50%);
 }
 
-.section p {
-    margin-bottom: 15px;
+.timeline-item:nth-child(even)::before {
+  left: auto;
+  right: -10px;
+}
+
+.timeline-content {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.timeline-image {
+  max-width: 150px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 768px) {
-    .main-content {
-        padding: 20px;
-    }
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 
-    h1 {
-        font-size: 2rem;
-    }
-
-    .section h2 {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
+  .timeline-item::before {
+    left: 50% !important;
+  }
 }
+  

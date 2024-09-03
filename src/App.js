@@ -14,10 +14,11 @@ import ResetPassword from "./components/ResetPassword";
 import VideoUploadPage from "./pages/VideoUploadPage";
 import DeepFakeResultsPage from "./pages/DeepFakeResultPage";
 
+
 const Layout = ({ children }) => (
   <div className="app-container">
     <Header />
-    <Sidebar />
+    
     <main className="main-content">{children}</main>
     <Footer />
   </div>

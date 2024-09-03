@@ -1,0 +1,41 @@
+.video-container {
+    position: relative;
+    width: 80%; /* Set width to 90% of the container */
+    margin: 0 auto;
+  }
+  
+  .tv-effect {
+    position: relative;
+    border: 5px solid #333; /* Boundary color and width */
+    border-radius: 8px;
+    padding: 10px; /* Increase padding if you want more space between the boundary and the video */
+    background: #000; /* Background color inside the boundary */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Optional shadow effect */
+  }
+  
+  .video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dot.active {
+    background-color: #333;
+  }
+  
