@@ -31,15 +31,18 @@
     text-decoration: none;
     color: white;
     font-weight: bold;
+    
+
 }
 
 .login,.signup {
     background-color: orange;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border-radius: 20px;
     cursor: pointer;
     color: white; /* Ensure text is visible on the orange background */
+    font-size: 21px;
 }
 
 
@@ -51,6 +54,7 @@
     padding: 10px 20px;
     border-radius: 25px;
     border: 0.1px solid silver; /* Add silver border */
+    
 }
 
 
@@ -58,7 +62,7 @@
     color: white; /* White text color */
     text-decoration: none;
     margin: 0 15px;
-    font-size: 18px;
+    font-size: 25px;
     cursor: pointer;
     transition: color 0.3s, background 0.3s;
     font-family: sans-serif;
@@ -73,8 +77,9 @@
     -webkit-text-fill-color: transparent; /* Ensure text is visible */
 }
 
-.navbar-item.active {
+.navbar-item-active {
     background: linear-gradient(45deg, #ff6600, #ffcc00); /* Gradient for active item */
     -webkit-background-clip: text; /* Apply gradient to text */
     -webkit-text-fill-color: transparent; /* Ensure text is visible */
+    font-size: 25px;
 }

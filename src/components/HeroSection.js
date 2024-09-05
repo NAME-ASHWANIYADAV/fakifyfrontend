@@ -15,7 +15,8 @@ const HeroSection = () => {
         <h1>We protect authenticity. <br /> Safeguard your <span className="highlight">digital truth</span></h1>
         <div className="email-subscribe">
           <input type="email" placeholder="name@email.com" />
-          <NavLink to="/login" className="cta-button">Upload Video for Analysis</NavLink>
+          {/* Update the NavLink to point to the video upload page */}
+          <NavLink to="/upload-video" className="cta-button">Upload Video for Analysis</NavLink>
         </div>
       </div>
       <div className="right-container">
@@ -27,5 +28,6 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
 
 
