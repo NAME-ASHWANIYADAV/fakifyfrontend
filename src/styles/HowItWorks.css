@@ -1,7 +1,7 @@
 /* HowItWorks.css */
 .timeline-container {
   position: relative;
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 40px 20px;
   background-color: #000; /* Dark background */
@@ -25,6 +25,7 @@
   padding: 20px 0;
   position: relative;
   width: 50%;
+  font-size: 30px;
 }
 
 .timeline-item:nth-child(odd) {

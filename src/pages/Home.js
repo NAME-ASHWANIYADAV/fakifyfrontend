@@ -22,7 +22,7 @@ return (
      <div className='VideoPlayer'><VideoPlayer/></div>
      <HowItWorks />
      <NewsGrid/>
-     <Contact/>
+    
      <MagicCrystals/>
      
     
