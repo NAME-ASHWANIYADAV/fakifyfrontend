@@ -14,7 +14,7 @@ const HeroSection = () => {
       <div className="hero-text">
         <h1>We protect authenticity. <br /> Safeguard your <span className="highlight">digital truth</span></h1>
         <div className="email-subscribe">
-          <input type="email" placeholder="name@email.com" />
+         
           {/* Update the NavLink to point to the video upload page */}
           <NavLink to="/upload-video" className="cta-button">Upload Video for Analysis</NavLink>
         </div>
