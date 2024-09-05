@@ -16,37 +16,33 @@ const About = () => {
 
   return (
     <div className="about-us-container">
-        
+
       <div className="goal-box">
-        <h3>Growth</h3>
-        <p>Innovation led strategy</p>
-        <p>Get high-quality product with sustainable and digital brand building.</p>
+        <h3>Deepfake Pornography:</h3>
+        <p>60% of deepfake content online is pornographic, causing severe privacy violations.</p>
       </div>
+
       <div className="goal-box">
-        <h3>Efficiency</h3>
-        <p>Streamline operations</p>
-        <p>Optimize your processes to achieve maximum productivity.</p>
+        <h3>Identity Fraud:</h3>
+        <p>Deepfakes used for impersonation, leading to financial loss and ruined lives.</p>
       </div>
+
       <div className="goal-box">
-        <h3>Innovation</h3>
-        <p>Lead the market</p>
-        <p>Develop innovative solutions that give you a competitive edge.</p>
+        <h3>Political Manipulation:</h3>
+        <p>Misinformation through deepfakes threatens democracy and national security.</p>
       </div>
+
       <div className="goal-box">
-        <h3>Innovation</h3>
-        <p>Lead the market</p>
-        <p>Develop innovative solutions that give you a competitive edge.</p>
+        <h3>Blackmail and Extortion:</h3>
+        <p>Victims coerced by fake videos, leading to financial and emotional damage.</p>
       </div>
+
       <div className="goal-box">
-        <h3>Innovation</h3>
-        <p>Lead the market</p>
-        <p>Develop innovative solutions that give you a competitive edge.</p>
+        <h3>Combat Cybercrime Targeting Women:</h3>
+        <p>Protect yourself online by understanding the tactics used by cybercriminals.</p>
+        <p>Learn about safe online practices and take steps to enhance your digital security.</p>
       </div>
-      <div className="goal-box">
-        <h3>Innovation</h3>
-        <p>Lead the market</p>
-        <p>Develop innovative solutions that give you a competitive edge.</p>
-      </div>
+
       {/* Add more boxes as needed */}
     </div>
   );

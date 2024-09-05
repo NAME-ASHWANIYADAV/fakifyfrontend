@@ -73,12 +73,10 @@ const Contact = () => {
               <label htmlFor="message">Message</label>
               <textarea id="message" name="message" rows="6" onChange={handleChange} required></textarea>
             </div>
-            <button type="submit" className="send-btn" onSubmit={handleSubmit}  >Send Message</button>
+            <button type="submit" className="send-btn" onSubmit={handleSubmit}>Send Message</button>
           </form>
         </div>
-        <div className="contact-gif">
-          <img src={gif}alt="Contact GIF" />
-        </div>
+       
       </div>
     );
   };
