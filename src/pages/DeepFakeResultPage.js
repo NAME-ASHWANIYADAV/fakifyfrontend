@@ -33,6 +33,58 @@
 // };
 
 // export default DeepFakeResultsPage;
+// import React from 'react';
+// import { useLocation } from 'react-router-dom';
+// import '../styles/deepFakeResultPage.css';
+
+// const DeepFakeResultsPage = () => {
+//   const location = useLocation();
+  
+//   // Simulate data if location.state is not available
+//   const defaultData = {
+//     videoUrl: 'path/to/your/sample/video.mp4',
+//     report: {
+//       summary: 'This is a summary of the deep fake analysis.',
+//       inconsistencies: [
+//         'Facial movements are unnatural in frame 123.',
+//         'Lighting inconsistency detected in frame 456.',
+//         'Lip synchronization issue detected in frame 789.',
+//       ],
+//       technicalAnalysis: 'The video shows multiple signs of deep fake manipulation, including unnatural facial expressions and lighting inconsistencies. The probability of this video being a deep fake is high.',
+//     },
+//     probabilityScore: 87, // Example score
+//   };
+
+//   // Use either the real data from location.state or the default data
+//   const { videoUrl, report, probabilityScore } = location.state || defaultData;
+
+//   return (
+//     <div className="results-container">
+//       <h2>Deep Fake Detection Results</h2>
+//       <div className="video-preview">
+//         <video src={videoUrl} controls />
+//       </div>
+//       <div className="report">
+//         <h3>Summary</h3>
+//         <p>{report.summary}</p>
+//         <h3>Inconsistencies Detected</h3>
+//         <ul>
+//           {report.inconsistencies.map((inc, index) => (
+//             <li key={index}>{inc}</li>
+//           ))}
+//         </ul>
+//         <h3>Technical Analysis</h3>
+//         <p>{report.technicalAnalysis}</p>
+//         <h3>Probability Score</h3>
+//         <p>{probabilityScore}%</p>
+//       </div>
+//       <button className="download-btn">Download PDF Report</button>
+//       <button className="share-btn">Share Results</button>
+//     </div>
+//   );
+// };
+
+// export default DeepFakeResultsPage;
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import '../styles/deepFakeResultPage.css';
@@ -44,7 +96,7 @@ const DeepFakeResultsPage = () => {
   const defaultData = {
     videoUrl: 'path/to/your/sample/video.mp4',
     report: {
-      summary: 'This is a summary of the deep fake analysis.',
+      summary: 'The video appears to be a deep fake based on multiple inconsistencies and manipulations detected.',
       inconsistencies: [
         'Facial movements are unnatural in frame 123.',
         'Lighting inconsistency detected in frame 456.',
@@ -56,7 +108,12 @@ const DeepFakeResultsPage = () => {
   };
 
   // Use either the real data from location.state or the default data
-  const { videoUrl, report, probabilityScore } = location.state || defaultData;
+  const { videoUrl, report = defaultData.report, probabilityScore = defaultData.probabilityScore } = location.state || defaultData;
+
+  // Generate a dynamic summary based on the probability score
+  const dynamicSummary = probabilityScore > 50
+    ? 'The video is likely a deep fake. Multiple signs of manipulation have been detected.'
+    : 'The video appears authentic with no significant signs of manipulation.';
 
   return (
     <div className="results-container">
@@ -66,18 +123,27 @@ const DeepFakeResultsPage = () => {
       </div>
       <div className="report">
         <h3>Summary</h3>
-        <p>{report.summary}</p>
+        {/* Display dynamic summary */}
+        <p>{dynamicSummary}</p>
+        
         <h3>Inconsistencies Detected</h3>
-        <ul>
-          {report.inconsistencies.map((inc, index) => (
-            <li key={index}>{inc}</li>
-          ))}
-        </ul>
+        {report.inconsistencies && report.inconsistencies.length > 0 ? (
+          <ul>
+            {report.inconsistencies.map((inc, index) => (
+              <li key={index}>{inc}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>No inconsistencies detected.</p>
+        )}
+        
         <h3>Technical Analysis</h3>
         <p>{report.technicalAnalysis}</p>
+        
         <h3>Probability Score</h3>
         <p>{probabilityScore}%</p>
       </div>
+      
       <button className="download-btn">Download PDF Report</button>
       <button className="share-btn">Share Results</button>
     </div>
@@ -85,4 +151,5 @@ const DeepFakeResultsPage = () => {
 };
 
 export default DeepFakeResultsPage;
+
 
