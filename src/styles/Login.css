@@ -40,7 +40,7 @@ body {
   
   .login-box {
 
-    background: linear-gradient(45deg, black, rgba(3, 52, 49, 0.726), black);
+    background: linear-gradient(45deg, black,#1e1e1e, black);
     /* background-color: #1e1e1e; Darker background for the form */
     padding: 40px;
     border-radius: 20px;
