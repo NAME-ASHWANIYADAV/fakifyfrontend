@@ -10,6 +10,7 @@ import HowItWorks from '../pages/HowItWorks'
 import MagicCrystals from '../components/MagicCrystals';
 import About from './About';
 import Contact from './Contact';
+import NewsGrid from './NewsGrid';
 
 
 function Home(){
@@ -20,6 +21,7 @@ return (
 
      <div className='VideoPlayer'><VideoPlayer/></div>
      <HowItWorks />
+     <NewsGrid/>
      <Contact/>
      <MagicCrystals/>
      
