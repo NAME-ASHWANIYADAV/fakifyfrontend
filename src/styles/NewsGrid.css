@@ -1,21 +1,23 @@
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 16px;
+.photo-column-flex {
+    display: flex;
+    flex-direction: row; /* Arrange items in a row */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+    gap: 16px; /* Space between items */
     padding: 20px;
-    background-color: #f0f0f0; /* Light background for better contrast */
+    background-color: #000000;
   }
   
-  .news-item {
-    border-radius: 12px; /* Rounded edges */
+  .photo-item {
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
-  .news-item img {
-    width: 100%;
-    height: auto;
+  .photo-item img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
     display: block;
-    border-radius: 12px; /* Ensure the image also has rounded edges */
+    border-radius: 12px;
   }
   
