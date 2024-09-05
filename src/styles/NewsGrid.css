@@ -1,23 +1,10 @@
-.photo-column-flex {
-    display: flex;
-    flex-direction: row; /* Arrange items in a row */
-    justify-content: center; /* Center the items horizontally */
-    align-items: center; /* Center the items vertically */
-    gap: 16px; /* Space between items */
-    padding: 20px;
-    background-color: #000000;
-  }
-  
-  .photo-item {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .photo-item img {
-    width: 100%; /* Ensure the image fills the container */
-    height: auto; /* Maintain aspect ratio */
-    display: block;
-    border-radius: 12px;
-  }
-  
+.photo-column-grid{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.photo-item{
+    margin:40px;
+}
