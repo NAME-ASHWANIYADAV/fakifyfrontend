@@ -14,6 +14,7 @@
 
 .contact-form {
   width: 100%; /* Full width inside container */
+  background-color: #1e1e1e;
 }
 
 .contact-form h2 {
@@ -24,6 +25,7 @@
 
 .form-group {
   margin-bottom: 20px;
+ 
 }
 
 .form-group label {

@@ -6,23 +6,24 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #0d0f21; /* Dark background for the whole page */
+  background: #000; /* Dark background for the whole page */
   color: #ffffff;
   padding: 20px;
 }
 
 h2 {
   font-size: 2rem;
-  color: #8e44ad; /* Purple for the heading */
+  color: orange; /* Purple for the heading */
   margin-bottom: 20px;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  background-color: #1e1e1e;
   width: 100%;
   max-width: 500px;
-  background: #1e2a43; /* Dark blue background for the form */
+  /* Dark blue background for the form */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
@@ -35,9 +36,9 @@ form {
 input[type="file"] {
   font-size: 1rem;
   padding: 10px;
-  border: 1px solid #3498db; /* Blue border for file input */
+  border: 1px solid orange; /* Blue border for file input */
   border-radius: 4px;
-  background: #2e3a5f; /* Darker blue background for the file input */
+  background:#1e1e1e; /* Darker blue background for the file input */
   color: #ffffff;
 }
 
@@ -54,9 +55,9 @@ label {
 select {
   font-size: 1rem;
   padding: 10px;
-  border: 1px solid #3498db; /* Blue border for select input */
+  border: 1px solid orange; /* Blue border for select input */
   border-radius: 4px;
-  background: #2e3a5f; /* Darker blue background for select */
+  background:#1e1e1e; /* Darker blue background for select */
   color: #ffffff;
   width: 100%;
 }

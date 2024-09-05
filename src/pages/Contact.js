@@ -3,7 +3,6 @@ import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import '../styles/Contact.css';
-import gif from '../assets/anime.gif';
 
 
 const Contact = () => {
@@ -36,7 +35,6 @@ const Contact = () => {
       
       if (response.ok) {
         alert('Form submitted successfully');
-        // Reset form fields
         setFormData({
           name: '',
           email: '',
