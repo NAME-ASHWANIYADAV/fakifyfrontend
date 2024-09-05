@@ -24,11 +24,12 @@ const HowItWorks = () => {
         </div>
       </div>
       <div className="timeline-item">
-        <img src={photu} alt="Planning" className="timeline-image" />
+        
         <div className="timeline-content">
           <h2>Generative Adversarial Networks (GANs)</h2>
           <p>generate deep fakes and simultaneously training another model to detect them improving the robustness of detection algorithms.</p>
         </div>
+        <img src={photu} alt="Planning" className="timeline-image" />
       </div>
       <div className="timeline-item">
         <img src={photu} alt="Planning" className="timeline-image" />
@@ -38,11 +39,12 @@ const HowItWorks = () => {
         </div>
       </div>
       <div className="timeline-item">
-        <img src={photu} alt="Planning" className="timeline-image" />
+       
         <div className="timeline-content">
           <h2>Biometric Verification</h2>
           <p>Analysing subtle behavioural traits such as micro-expressions, eye and head movement to detect anomalies. </p>
         </div>
+        <img src={photu} alt="Planning" className="timeline-image" />
       </div>
 
       <div className="timeline-item">
