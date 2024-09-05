@@ -1,0 +1,21 @@
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 20px;
+    background-color: #f0f0f0; /* Light background for better contrast */
+  }
+  
+  .news-item {
+    border-radius: 12px; /* Rounded edges */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+  
+  .news-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px; /* Ensure the image also has rounded edges */
+  }
+  
