@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #0d0f21; /* Dark background for techy look */
+  background: #000; /* Dark background for techy look */
   color: #ffffff;
   padding: 40px;
   margin: 0 auto;
@@ -13,7 +13,7 @@
 }
 
 h2 {
-  color: #8e44ad; /* Purple for heading */
+  color: orange; /* Purple for heading */
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
@@ -31,7 +31,7 @@ video {
 }
 
 .report {
-  background: #1e2a43; /* Dark blue background for the report section */
+  background: #1e1e1e; /* Dark blue background for the report section */
   border-radius: 10px;
   padding: 20px;
   width: 100%;
@@ -40,7 +40,7 @@ video {
 }
 
 .report h3 {
-  color: #3498db; /* Blue for subsection headings */
+  color: orange; /* Blue for subsection headings */
   font-size: 1.5rem;
   margin-top: 20px;
 }
@@ -68,7 +68,7 @@ video {
 
 .download-btn,
 .share-btn {
-  background: #8e44ad; /* Purple background for buttons */
+  background: orange; /* Purple background for buttons */
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -81,7 +81,7 @@ video {
 
 .download-btn:hover,
 .share-btn:hover {
-  background: #732d91; /* Darker purple on hover */
+  background: rgb(186, 122, 3); /* Darker purple on hover */
   transform: scale(1.05); /* Slight scale effect on hover */
 }
 
