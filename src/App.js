@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
+// import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -14,10 +14,11 @@ import ResetPassword from "./components/ResetPassword";
 import VideoUploadPage from "./pages/VideoUploadPage";
 import DeepFakeResultsPage from "./pages/DeepFakeResultPage";
 
+
 const Layout = ({ children }) => (
   <div className="app-container">
     <Header />
-    <Sidebar />
+    
     <main className="main-content">{children}</main>
     <Footer />
   </div>

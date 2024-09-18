@@ -1,129 +1,54 @@
 /* About.css */
-.about{
-    margin-left: 250px;
-    
+.body{
+    background-color: #000;
 }
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-}
-
-.main-content {
-    margin-left: 250px; /* Adjust this based on the sidebar width */
-     /* Full width minus sidebar width */
-    box-sizing: border-box;
-    overflow: auto;
-}
-
-.about {
+.about-us-container {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background: #000; /* Dark background for techy look */
-    color: #ffffff;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
     padding: 20px;
-    box-sizing: border-box; /* Include padding in element's total width and height */
-    width: 80%; /* Ensure full width */
-}
-
-.intro, .mission, .approach, .solution {
-    padding: 40px;
-   
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background: #18181C; /* Ensure background color is consistent */
-}
-
-.intro {
-    background: linear-gradient(135deg, #18181C, #222228);
-    /* Subtle gradient */
-}
-
-.intro h1 {
-    color: #8e44ad; /* Purple for heading */
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.intro p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-.mission {
-    background: linear-gradient(135deg, #18181C, #222228);
-    /* Different gradient for variety */
-    margin-top: 20px;
-}
-
-.mission h2 {
-    color: #3498db; /* Blue for sub-headings */
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.mission p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-.approach {
-    background: linear-gradient(135deg, #18181C, #222228);
-    margin-top: 20px;
-}
-
-.approach h2 {
-    color: #8e44ad; /* Purple for sub-headings */
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.approach ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.approach li {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    background: #000000;
-    border-radius: 5px;
-    padding: 10px 15px;
-}
-
-.approach li strong {
-    color: #3498db; /* Blue for strong text */
-}
-
-.solution {
-    background: linear-gradient(135deg, #18181C, #222228);
-    margin-top: 20px;
-}
-
-.solution h2 {
-    color: #8e44ad; /* Purple for sub-headings */
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.solution p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-@media screen and (max-width: 768px) {
-    .intro, .mission, .approach, .solution {
-        padding: 20px;
+    background-color: #000; /* Dark background color */
+  }
+  
+  .goal-box {
+    width: 30%;
+    min-height: 200px;
+    margin: 10px; /* Reduced margin to decrease space between boxes */
+    background-color: #1e1e1e; /* Dark grey background for the boxes */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    text-align: center;
+    color: #fff; /* White text for contrast */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .goal-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8); /* Stronger shadow on hover */
+  }
+  
+  /* Text styles */
+  .goal-box h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:orange; /* Light color for headings (golden) */
+  }
+  
+  .goal-box p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #aaa; /* Lighter grey for paragraph text */
+    font-size: 25px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .goal-box {
+      width: 100%;
+      margin: 10px 0;
     }
-
-    .intro h1, .mission h2, .approach h2, .solution h2 {
-        font-size: 1.8rem;
-    }
-
-    .intro p, .mission p, .approach li, .solution p {
-        font-size: 1rem;
-    }
-}
+  }
+  

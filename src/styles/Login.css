@@ -1,93 +1,180 @@
-/* Login.css */
-
-.login-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: #0d0f21; /* Dark background for the whole page */
-  color: #ffffff;
-  padding: 20px;
-}
-
-h2 {
-  font-size: 2rem;
-  color: #8e44ad; /* Purple for the main heading */
-  margin-bottom: 20px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 400px;
-  background: #1e2a43; /* Dark blue background for the form */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-}
-
-input {
-  font-size: 1rem;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #3498db; /* Blue border for input fields */
-  border-radius: 4px;
-  background: #2e3a5f; /* Slightly lighter blue background for inputs */
-  color: #ffffff;
-}
-
-input::placeholder {
-  color: #aab8c2; /* Light gray placeholder text */
-}
-
-button {
-  font-size: 1rem;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  background: #8e44ad; /* Purple background for the button */
-  color: #ffffff;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background: #732d91; /* Darker purple on hover */
-}
-
-button:focus {
-  outline: 2px solid #3498db; /* Blue outline on focus */
-}
-
-button:last-of-type {
-  background: transparent;
-  border: 1px solid #3498db; /* Blue border for the 'Forgot Password' button */
-  color: #3498db;
-  margin-top: 15px;
-}
-
-button:last-of-type:hover {
-  background: #3498db; /* Blue background on hover for 'Forgot Password' button */
-  color: #ffffff;
-}
-
-@media screen and (max-width: 480px) {
+body {
+    
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #111; /* Dark background */
+    color: #fff; /* Light text */
+    
+  }
+  
   .login-container {
-      padding: 10px;
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center;     /* Vertically centers the content */
+    height: 100vh;           /* Makes the container take the full viewport height */
+    position: relative;
+    
+    
+  }
+  
+  .login-box {
+    background: linear-gradient(45deg, black, rgba(3, 52, 49, 0.726), black);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(139, 133, 133, 0.3);
+    width: 100%;
+    max-width: 400px; /* Reduce width to better fit smaller screens */
+    text-align: center;
+    z-index: 1;
+    
+  }
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    
+  }
+  
+  .login-box {
+
+    background: linear-gradient(45deg, black,#1e1e1e, black);
+    /* background-color: #1e1e1e; Darker background for the form */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(139, 133, 133, 0.3); /* More prominent shadow */
+    width: 100%;
+    max-width: 800px;
+    height: 800px;
+    text-align: center;
+    z-index: 1;
+    
+    
+
   }
 
+  .heading{
+    color: orange;
+  }
+  
+  
   h2 {
-      font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: orange; /* White text for the title */
   }
+  
+  p {
+    color: #ccc; /* Lighter text for subheading */
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-left: 100px;
+    margin-top: 200px;
+    background-color: #6c1f1f;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+   
+    padding: 12px 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+  }
+  
+  input[type="email"]::placeholder,
+  input[type="password"]::placeholder {
+    color: #888; /* Placeholder color */
+  }
+  
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    background-color: #444; /* Darker background on focus */
+    outline: none;
+    
+  }
+  
+  button[type="submit"] {
+    padding: 12px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: orange; /* Blue button */
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: background-color 0.3s;
+    
+  }
+  
+  button[type="submit"]:hover {
+    background-color: orange; /* Darker blue on hover */
+  }
+  
+  button:last-of-type {
+    background-color: transparent;
+    border: none;
+    color: orange;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    cursor: pointer;
+    
+  }
+  
+  button:last-of-type:hover {
+    text-decoration: underline;
+  }
+  
+  /* Background images */
+  .background-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    margin-left: 20px;
+  }
+  
+  .bg-item {
 
-  input {
-      font-size: 0.9rem;
+    position: absolute;
+    width: 100px;
+    height: auto;
+    opacity: 0.9;
   }
-
-  button {
-      font-size: 0.9rem;
+  
+  .bg-item-left {
+    left: 10%;
+    top: 20%;
   }
-}
+  
+  .bg-item-right {
+    right: 10%;
+    top: 20%;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
+    .login-box {
+      padding: 20px;
+    }
+  
+    .bg-item {
+      width: 70px;
+    }
+  }
+  

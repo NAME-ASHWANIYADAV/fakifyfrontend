@@ -1,84 +1,73 @@
-/* HeroSection.css */
-
-.hero-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #0d0f21, #2c3e50); /* Dark techy gradient background */
-    color: #ffffff;
-    padding: 0 20px;
+.hero {
+  display: flex;
+  justify-content: space-between; /* Ensure space between the left and right images */
+  align-items: center;            /* Align items at the center vertically */
+  padding: 50px 0;
+  text-align: center;
+  position: relative;
 }
 
-.hero-section h1 {
-    font-size: 2.5rem;
-    /*color: #8e44ad; /* Purple color for the main heading */
-    margin-bottom: 20px;
-    text-shadow: 0 3px 5px rgba(142, 68, 173, 0.5);
-    animation: fadeInDown 1s ease-in-out;
+.hero-img {
+height: auto;
 }
 
-.hero-section p {
-    font-size: 1.2rem;
-    color: #ecf0f1; /* Light grey text for contrast */
-    margin-bottom: 30px;
-    animation: fadeInUp 1s ease-in-out;
+.left,
+.right-container {
+  flex: 1; /* Allow the left and right containers to take up equal space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
-.cta-button {
-    padding: 15px 30px;
-    font-size: 1rem;
-    color: #ffffff;
-    background-color: #3498db; /* Blue background for CTA button */
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    animation: fadeInUp 1.5s ease-in-out;
+.right-container {
+  flex-direction: column; /* Stack the images vertically */
+  align-items: flex-end;
+  margin-right: 50px; 
+  margin-top: 100px; /* Align images to the right */
 }
 
-.cta-button:hover {
-    background-color: #8e44ad; /* Purple background on hover */
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 0 15px rgba(142, 68, 173, 0.7); /* Purple glow effect */
+.hero-text {
+  flex: 2; /* Take up more space for the text content */
+  margin: 0 20px; /* Add margin on the sides to separate from images */
+  z-index: 1;
+  color: white;
 }
 
-/* Keyframes for animations */
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.hero-text h1 {
+  font-size: 5rem;
+  line-height: 1.2;
+  font-family: sans-serif;
 }
 
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.highlight {
+  color: orange;
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 2rem;
-    }
-
-    .hero-section p {
-        font-size: 1rem;
-    }
-
-    .cta-button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
+.email-subscribe {
+  margin-top: 20px;
 }
+
+.email-subscribe input {
+  padding: 10px;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.email-subscribe .cta-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+  
