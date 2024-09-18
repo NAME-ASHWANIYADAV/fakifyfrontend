@@ -1,43 +1,39 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../styles/SignUp.css';
+import { useNavigate } from 'react-router-dom';
+import '../styles/Login.css';
 
-const SignUp = () => {
-  const [name, setName] = useState('');
+const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [question, setQuestion] = useState('');
-  const [answer, setAnswer] = useState('');
+  const navigate = useNavigate();
 
-  const handleSignUp = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://fakifybackend.onrender.com/api/auth/signup', { name, email, password, question, answer });
-      alert('Sign Up Successful! Please log in.');
+      const response = await axios.post('https://fakifybackend.onrender.com/api/auth/login', { email, password });
+      if (response.data.success) {
+        alert('Login Successful!');
+        // Redirect to /upload-video page
+        navigate('/upload-video');
+      } else {
+        alert('Invalid email or password.');
+      }
     } catch (error) {
-      alert('Error during sign up. Please try again.');
+      alert('Error during login. Please try again.');
     }
   };
 
   return (
-    <div className="signup-container">
-      <h2>Sign Up</h2>
-      <form onSubmit={handleSignUp}>
-        <input
-          type="text"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-          autoComplete="name"
-        />
+    <div className="login-container">
+      <h2>Login</h2>
+      <form onSubmit={handleLogin}>
         <input
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          autoComplete="email"
         />
         <input
           type="password"
@@ -45,29 +41,12 @@ const SignUp = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          autoComplete="new-password"
         />
-        <select value={question} onChange={(e) => setQuestion(e.target.value)} required>
-          <option value="">Select a security question</option>
-          <option value="What is your mother's  name?">What is your mother's  name?</option>
-          <option value="What was your first pet's name?">What was your first pet's name?</option>
-          <option value="What was the model of your first car?">What was the model of your first car?</option>
-          <option value="Where did you go to high school?">Where did you go to high school?</option>
-        </select>
-        <input
-          type="text"
-          placeholder="Answer"
-          value={answer}
-          onChange={(e) => setAnswer(e.target.value)}
-          required
-          autoComplete="off"
-        />
-        <button type="submit">Sign Up</button>
+        <button type="submit">Login</button>
       </form>
+      <button onClick={() => navigate('/forgot-password')}>Forgot Password?</button>
     </div>
   );
 };
 
-export default SignUp;
-
-
+export default Login;

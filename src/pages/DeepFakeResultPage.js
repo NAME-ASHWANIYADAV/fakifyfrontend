@@ -1,62 +1,18 @@
-// import React from 'react';
-// import { useLocation } from 'react-router-dom';
-// import '../styles/deepFakeResultPage.css';
-
-// const DeepFakeResultsPage = () => {
-//   const location = useLocation();
-//   const { videoUrl, report, probabilityScore } = location.state;
-
-//   return (
-//     <div className="results-container">
-//       <h2>Deep Fake Detection Results</h2>
-//       <div className="video-preview">
-//         <video src={videoUrl} controls />
-//       </div>
-//       <div className="report">
-//         <h3>Summary</h3>
-//         <p>{report.summary}</p>
-//         <h3>Inconsistencies Detected</h3>
-//         <ul>
-//           {report.inconsistencies.map((inc, index) => (
-//             <li key={index}>{inc}</li>
-//           ))}
-//         </ul>
-//         <h3>Technical Analysis</h3>
-//         <p>{report.technicalAnalysis}</p>
-//         <h3>Probability Score</h3>
-//         <p>{probabilityScore}%</p>
-//       </div>
-//       <button className="download-btn">Download PDF Report</button>
-//       <button className="share-btn">Share Results</button>
-//     </div>
-//   );
-// };
-
-// export default DeepFakeResultsPage;
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import '../styles/deepFakeResultPage.css';
 
 const DeepFakeResultsPage = () => {
   const location = useLocation();
-  
-  // Simulate data if location.state is not available
-  const defaultData = {
-    videoUrl: 'path/to/your/sample/video.mp4',
-    report: {
-      summary: 'This is a summary of the deep fake analysis.',
-      inconsistencies: [
-        'Facial movements are unnatural in frame 123.',
-        'Lighting inconsistency detected in frame 456.',
-        'Lip synchronization issue detected in frame 789.',
-      ],
-      technicalAnalysis: 'The video shows multiple signs of deep fake manipulation, including unnatural facial expressions and lighting inconsistencies. The probability of this video being a deep fake is high.',
-    },
-    probabilityScore: 87, // Example score
-  };
+  const { videoUrl, report, probabilityScore } = location.state || {};
 
-  // Use either the real data from location.state or the default data
-  const { videoUrl, report, probabilityScore } = location.state || defaultData;
+  // Debug log to check received state
+  console.log('Received State:', location.state);
+
+  // Ensure all necessary data is present
+  if (!videoUrl || !report || typeof probabilityScore === 'undefined') {
+    return <div>Loading or insufficient data to display results.</div>;
+  }
 
   return (
     <div className="results-container">
@@ -66,23 +22,30 @@ const DeepFakeResultsPage = () => {
       </div>
       <div className="report">
         <h3>Summary</h3>
-        <p>{report.summary}</p>
+        <p>{report.summary || 'No summary available'}</p>
+
         <h3>Inconsistencies Detected</h3>
-        <ul>
-          {report.inconsistencies.map((inc, index) => (
-            <li key={index}>{inc}</li>
-          ))}
-        </ul>
+        {report.inconsistencies && report.inconsistencies.length > 0 ? (
+          <ul>
+            {report.inconsistencies.map((inc, index) => (
+              <li key={index}>{inc}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>No major inconsistencies detected.</p>
+        )}
+
         <h3>Technical Analysis</h3>
-        <p>{report.technicalAnalysis}</p>
+        <p>{report.technicalAnalysis || 'No technical analysis available'}</p>
+
         <h3>Probability Score</h3>
-        <p>{probabilityScore}%</p>
+        <p>{(probabilityScore * 100).toFixed(2)}%</p>
       </div>
-      <button className="download-btn">Download PDF Report</button>
-      <button className="share-btn">Share Results</button>
+
+      <button className="download-btn" onClick={() => alert('Download PDF functionality is not implemented yet!')}>Download PDF Report</button>
+      <button className="share-btn" onClick={() => alert('Share functionality is not implemented yet!')}>Share Results</button>
     </div>
   );
 };
 
 export default DeepFakeResultsPage;
-

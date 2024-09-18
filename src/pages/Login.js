@@ -14,7 +14,8 @@ const Login = () => {
       const response = await axios.post('https://fakifybackend.onrender.com/api/auth/login', { email, password });
       if (response.data.success) {
         alert('Login Successful!');
-        // Redirect to dashboard or home page
+        // Redirect to /upload-video page
+        navigate('/upload-video');
       } else {
         alert('Invalid email or password.');
       }
@@ -27,9 +28,20 @@ const Login = () => {
     <div className="login-container">
       <h2>Login</h2>
       <form onSubmit={handleLogin}>
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
         <button type="submit">Login</button>
       </form>
       <button onClick={() => navigate('/forgot-password')}>Forgot Password?</button>
