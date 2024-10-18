@@ -6,9 +6,6 @@ const DeepFakeResultsPage = () => {
   const location = useLocation();
   const { videoUrl, report, probabilityScore } = location.state || {};
 
-  // Debug log to check received state
-  console.log('Received State:', location.state);
-
   // Ensure all necessary data is present
   if (!videoUrl || !report || typeof probabilityScore === 'undefined') {
     return <div>Loading or insufficient data to display results.</div>;

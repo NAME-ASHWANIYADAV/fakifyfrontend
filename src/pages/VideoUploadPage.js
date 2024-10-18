@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../styles/VideoUploadPage.css';
 
@@ -13,7 +12,7 @@ const VideoUploadPage = () => {
     setVideoFile(e.target.files[0]);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!videoFile) {
@@ -23,40 +22,27 @@ const VideoUploadPage = () => {
 
     setStatus('Processing...');
 
-    const formData = new FormData();
-    formData.append('video', videoFile);
+    // Simulate successful backend response
+    setTimeout(() => {
+      setStatus('Analyzing...');
 
-    try {
-      const response = await axios.post('http://localhost:5000/predict', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' },
+      // Static probability score and report for now
+      const probabilityScore = 0.75;  // Simulate a 75% deepfake probability score
+      const report = {
+        summary: 'Static audio analysis report generated.',
+        inconsistencies: ['Lip sync mismatch', 'Voice modulation detected'],
+        technicalAnalysis: 'This is a static technical analysis with no real-time backend data.'
+      };
+
+      // Navigate to results page with static data
+      navigate('/deep-fake-results', {
+        state: {
+          videoUrl: URL.createObjectURL(videoFile), // The uploaded video
+          report,
+          probabilityScore
+        }
       });
-
-      if (response.status === 200) {
-        setStatus('Analyzing...');
-        const probabilityScore = response.data.audio_fakeness_percentage;
-
-        // Debug log to verify the response data
-        console.log('Prediction Response:', response.data);
-
-        // Redirect to /deep-fake-results with analysis results as state
-        navigate('/deep-fake-results', { 
-          state: { 
-            videoUrl: URL.createObjectURL(videoFile), 
-            report: { 
-              summary: 'Audio analysis report generated.', 
-              inconsistencies: [],  // Placeholder
-              technicalAnalysis: 'Detailed analysis to be added later.'
-            }, 
-            probabilityScore 
-          } 
-        });
-      } else {
-        setStatus('Error in analysis. Please try again later.');
-      }
-    } catch (error) {
-      console.error('Error during analysis:', error);
-      setStatus('Error in analysis. Please try again later.');
-    }
+    }, 2000); // Simulate 2-second delay for "processing"
   };
 
   return (
